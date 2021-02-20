@@ -11,7 +11,7 @@
   /* font: 100 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
   -webkit-transform: translateZ(0);
   -webkit-font-smoothing: subpixel-antialiased; */
-  background: #333;
+  background-color: #333;
   height: 46px;
   /* transition: height 0.2s ease-in-out; */
   /* transition-property: height;
@@ -35,21 +35,63 @@
   background-size: 115px 22px;
 } */
 
+#imgLogo {
+  width: 25%;
+  background-color: #1fb453;
+}
+
 #logo {
   height: 46px;
   width: 184px;
-  background-color: white;
+  background-color: #1fb453;
+  display: flex;
+  position: fixed;
+  left: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* border: 1px solid red; */
+}
+
+#homeBtn {
+  /* width: 75px; */
+  min-width: 70px;
+  /* border: 1px solid blue; */
+  display: flex;
+  position: relative;
+  bottom: 5px;
+  right: 10px;
+  background-color: #1fb453;
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  color: whitesmoke;
+  margin: 10px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.navBtnContainer {
+  background-color: transparent;
+  /* border: 1px solid red; */
+  display: inline-block;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  height: 46px;
 }
 
 .nav-bar-btn {
+  position: relative;
+  /* top: 0px; */
+  width: 125px;
+  height: 30px;
+  /* border: 1px solid red; */
+  padding-top: 0px;
+
   cursor: pointer;
-  width: 50px;
   text-align: center;
-  min-width: 200px;
-  font-size: 20px;
-  color: #1fb453;
-  margin: 10px;
-  padding: 10px;
+  font-size: 15px;
+  color: whitesmoke;
 }
 
 .profile-dropdown {

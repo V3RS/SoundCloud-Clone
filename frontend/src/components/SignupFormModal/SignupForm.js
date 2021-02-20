@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
+// import { Modal } from "../../context/Modal";
+// import LoginForm from "../../LoginFormModal/"
 import * as sessionActions from "../../store/session";
 import "./SignupForm.css";
 
@@ -80,6 +82,7 @@ function SignupFormPage() {
           Sign Up
         </button>
         <button
+          type="button"
           className="signup-button"
           onClick={() => history.push("/login")}
         >

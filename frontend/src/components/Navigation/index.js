@@ -17,10 +17,10 @@ function Navigation({ isLoaded }) {
     sessionLinks = <ProfileButton user={sessionUser} />;
   } else {
     sessionLinks = (
-      <>
+      <div className="navBtnContainer">
         <LoginFormModal />
         <SignupFormModal />
-      </>
+      </div>
     );
   }
 
@@ -28,9 +28,8 @@ function Navigation({ isLoaded }) {
     <div className="navbar">
       <nav id="nav">
         <div id="logo">
-          <img src={logo} />
-
-          <NavLink id="homeBtn" className="nav-bar-btn" exact to="/">
+          <img id="imgLogo" src={logo} />
+          <NavLink id="homeBtn" exact to="/">
             SOUNDWAVE
           </NavLink>
         </div>

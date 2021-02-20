@@ -42,14 +42,9 @@
   font-size: 20px;
   color: white;
   text-decoration: none;
+  color: #1fb453;
   margin: 10px;
   padding: 10px;
-  background-color: black;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.nav-bar-btn:hover {
-  background-color: white;
-  color: black;
+  background: #333;
+  border: none;
 }

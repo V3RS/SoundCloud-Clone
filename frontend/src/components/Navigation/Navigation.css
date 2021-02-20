@@ -2,14 +2,43 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #15883e;
-  padding: 15px;
-  margin-bottom: 10px;
+  /* padding: 15px; */
+  /* margin-bottom: 10px; */
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  /* font: 100 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
+  -webkit-transform: translateZ(0);
+  -webkit-font-smoothing: subpixel-antialiased; */
+  background: #333;
+  height: 46px;
+  /* transition: height 0.2s ease-in-out; */
+  /* transition-property: height;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s; */
 }
 
 #nav {
   width: fit-content;
   display: flex;
+}
+
+/* #homeBtn {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background: transparent
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAAAWCAQAAABZc2uEAAADSUlEQ…3SKFnqNKkVJRmZ4P8+jXJC5Yw26L9MEC6lVJmXTqrMvwBTThqYRlj40wAAAABJRU5ErkJggg==)
+    no-repeat 60px 11px;
+  background-size: 115px 22px;
+} */
+
+#logo {
+  height: 46px;
+  width: 184px;
+  background-color: white;
 }
 
 .nav-bar-btn {
@@ -18,17 +47,9 @@
   text-align: center;
   min-width: 200px;
   font-size: 20px;
-  color: white;
-  text-decoration: none;
+  color: #1fb453;
   margin: 10px;
   padding: 10px;
-  background-color: black;
-  border-radius: 20px;
-}
-
-.nav-bar-btn:hover {
-  background-color: white;
-  color: black;
 }
 
 .profile-dropdown {

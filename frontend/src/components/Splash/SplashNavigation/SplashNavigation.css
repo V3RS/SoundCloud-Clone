@@ -1,0 +1,118 @@
+.splash-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* padding: 15px; */
+  /* margin-bottom: 10px; */
+  position: fixed;
+  top: 0px;
+  width: 1240px;
+  /* font: 100 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
+  -webkit-transform: translateZ(0);
+  -webkit-font-smoothing: subpixel-antialiased; */
+  /* background-color: #333; */
+  height: 46px;
+  /* transition: height 0.2s ease-in-out; */
+  /* transition-property: height;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s; */
+}
+
+#splash-nav {
+  width: fit-content;
+  display: flex;
+}
+
+/* #homeBtn {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background: transparent
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAAAWCAQAAABZc2uEAAADSUlEQ…3SKFnqNKkVJRmZ4P8+jXJC5Yw26L9MEC6lVJmXTqrMvwBTThqYRlj40wAAAABJRU5ErkJggg==)
+    no-repeat 60px 11px;
+  background-size: 115px 22px;
+} */
+
+#splash-imgLogo {
+  width: 25%;
+  /* background-color: #1fb453; */
+}
+
+#splash-logo {
+  height: 46px;
+  width: 184px;
+  /* background-color: #1fb453; */
+  display: flex;
+  position: fixed;
+  top: 0px;
+  left: 365px;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* border: 1px solid red; */
+}
+
+#splash-homeBtn {
+  /* width: 75px; */
+  min-width: 70px;
+  /* border: 1px solid blue; */
+  display: flex;
+  position: relative;
+  bottom: 5px;
+  right: 10px;
+  /* background-color: #1fb453; */
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  color: whitesmoke;
+  margin: 10px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.splash-navBtnContainer {
+  background-color: transparent;
+  /* border: 1px solid red; */
+  display: inline-block;
+  position: fixed;
+  top: 0px;
+  right: 365px;
+  height: 46px;
+}
+
+.splash-nav-bar-btn {
+  position: relative;
+  /* top: 0px; */
+  width: 125px;
+  height: 30px;
+  /* border: 1px solid red; */
+  padding-top: 0px;
+
+  cursor: pointer;
+  text-align: center;
+  font-size: 15px;
+  color: whitesmoke;
+}
+
+.splash-profile-dropdown {
+  list-style-type: none;
+}
+
+.splash-profile-btn {
+  cursor: pointer;
+  width: 50px;
+  text-align: center;
+  min-width: 200px;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  padding: 10px;
+  background-color: black;
+  border-radius: 20px;
+}
+.splash-profile-btn:hover {
+  background-color: white;
+  color: black;
+}

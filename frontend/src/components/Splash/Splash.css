@@ -1,0 +1,32 @@
+.slider-container {
+  position: fixed;
+  top: 0px;
+  border: 1px solid black;
+  height: 450px;
+  width: 1240px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: -1;
+  /* background-color: red; */
+  background-image: url("./splash-img.png");
+  background-size: 900px 450px;
+  border-top: 5px solid #15883e;
+}
+
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.splash-search-box-container {
+  border: none;
+  display: flex;
+  justify-content: center;
+  line-height: 1.7;
+  margin-top: 50px;
+  position: fixed;
+  top: 450px;
+}

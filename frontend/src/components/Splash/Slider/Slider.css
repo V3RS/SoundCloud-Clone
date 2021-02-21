@@ -1,0 +1,57 @@
+.splash-slider-container {
+  color: white;
+}
+
+#slider1title {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 140px;
+  margin-bottom: 8px;
+  font-size: 40px;
+  font-weight: 100;
+}
+
+#slider1text {
+  font-size: 20px;
+  max-width: 530px;
+  text-align: center;
+  position: relative;
+  top: 170px;
+}
+
+#slider1btns {
+  /* border: 3px solid red; */
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 180px;
+}
+
+#slider1btn1 {
+  cursor: pointer;
+  background: transparent;
+  color: #fff;
+  border-color: #ccc;
+  font-size: 17px;
+  min-width: 164px;
+  height: 46px;
+  margin-right: 25px;
+  padding-top: 12px;
+  border-radius: 5px;
+  text-align: center;
+}
+#slider1btn2 {
+  cursor: pointer;
+  background-color: #15883e;
+  color: #fff;
+  /* border-color: #ccc; */
+  border: none;
+  font-size: 17px;
+  min-width: 164px;
+  height: 46px;
+  margin-right: 25px;
+  padding-top: 12px;
+  border-radius: 5px;
+  text-align: center;
+}

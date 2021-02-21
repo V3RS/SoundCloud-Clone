@@ -40,16 +40,19 @@
 .nav-bar-btn {
   width: 50px;
   font-size: 20px;
-  color: white;
   text-decoration: none;
+  color: whitesmoke;
   margin: 10px;
   padding: 10px;
-  background-color: black;
-  border-radius: 20px;
-  cursor: pointer;
+  background: #333;
+  border: none;
 }
 
-.nav-bar-btn:hover {
-  background-color: white;
-  color: black;
+#signInBtn {
+  border: 1px solid whitesmoke;
+  align-items: center;
+  padding-top: 5px;
+  width: 75px;
+  border-radius: 5px;
+  background: transparent;
 }

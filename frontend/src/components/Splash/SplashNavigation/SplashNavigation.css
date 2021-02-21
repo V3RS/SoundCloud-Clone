@@ -45,9 +45,9 @@
   width: 184px;
   /* background-color: #1fb453; */
   display: flex;
-  position: fixed;
-  top: 0px;
-  left: 365px;
+  position: relative;
+  top: 10px;
+  right: 240%;
   padding-left: 10px;
   padding-right: 10px;
   /* border: 1px solid red; */
@@ -75,9 +75,10 @@
   background-color: transparent;
   /* border: 1px solid red; */
   display: inline-block;
-  position: fixed;
-  top: 0px;
-  right: 365px;
+  position: absolute;
+  top: 10px;
+  /* right: 600px; */
+  left: 975px;
   height: 46px;
 }
 

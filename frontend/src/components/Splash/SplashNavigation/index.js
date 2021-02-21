@@ -3,13 +3,13 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ProfileButton from "./ProfileButton";
-import LoginFormModal from "../LoginFormModal";
-import SignupFormModal from "../SignupFormModal";
+import LoginFormModal from "../../LoginFormModal";
+import SignupFormModal from "../../SignupFormModal";
 
-import "./Navigation.css";
+import "./SplashNavigation.css";
 import logo from "./logo.png";
 
-function Navigation({ isLoaded }) {
+function SplashNavigation({ isLoaded }) {
   const sessionUser = useSelector((state) => state.session.user);
 
   let sessionLinks;
@@ -17,7 +17,7 @@ function Navigation({ isLoaded }) {
     sessionLinks = <ProfileButton user={sessionUser} />;
   } else {
     sessionLinks = (
-      <div className="navBtnContainer">
+      <div className="splash-navBtnContainer">
         <LoginFormModal />
         <SignupFormModal />
       </div>
@@ -25,11 +25,11 @@ function Navigation({ isLoaded }) {
   }
 
   return (
-    <div className="navbar">
-      <nav id="nav">
-        <div id="logo">
-          <img id="imgLogo" src={logo} />
-          <NavLink id="homeBtn" exact to="/">
+    <div className="splash-navbar">
+      <nav id="splash-nav">
+        <div id="splash-logo">
+          <img id="splash-imgLogo" src={logo} />
+          <NavLink id="splash-homeBtn" exact to="/">
             SOUNDWAVE
           </NavLink>
         </div>
@@ -40,4 +40,4 @@ function Navigation({ isLoaded }) {
   );
 }
 
-export default Navigation;
+export default SplashNavigation;

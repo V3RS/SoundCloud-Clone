@@ -1,0 +1,72 @@
+#search-splash {
+  background: #f0f0f0;
+  /* background: rgba(211, 211, 211, 0.411); */
+  width: 520px;
+  border: none;
+  height: 45px;
+  padding: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 16px;
+  border-radius: 3px 0 0 3px;
+}
+
+#search-btn {
+  cursor: pointer;
+  /* background: rgba(211, 211, 211, 0.411); */
+  background: #f0f0f0;
+  /* margin-right: 18px; */
+  border: none;
+  height: 45px;
+  width: 50px;
+  font-size: 19px;
+  /* background-color: #f0f0f0; */
+  border-radius: 0 3px 3px 0;
+  background: url(https://a-v2.sndcdn.com/assets/images/search-dbfe5cbb.svg)
+    15px 15px no-repeat;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  background-size: 40%;
+}
+
+#search-or {
+  font-size: 20px;
+  padding-right: 20px;
+  /* padding-bottom: 80px; */
+  display: flex;
+  align-items: center;
+}
+
+#search-btn-div {
+  width: 60px;
+  /* border: 1px solid black; */
+  position: relative;
+  bottom: 5px;
+}
+
+#search-or-div {
+  /* border: 1px solid black; */
+  position: relative;
+  bottom: 15px;
+}
+
+#upload-search-btn {
+  cursor: pointer;
+  background-color: #15883e;
+  color: #fff;
+  /* border-color: #ccc; */
+  border: none;
+  font-size: 17px;
+  min-width: 164px;
+  height: 46px;
+  margin-right: 25px;
+  padding-top: 12px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#search-container {
+  display: flex;
+  justify-content: space-between;
+}

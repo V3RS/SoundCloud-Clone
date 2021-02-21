@@ -46,7 +46,7 @@
   /* background-color: #1fb453; */
   display: flex;
   position: relative;
-  top: 10px;
+  top: 15px;
   right: 240%;
   padding-left: 10px;
   padding-right: 10px;
@@ -76,7 +76,7 @@
   /* border: 1px solid red; */
   display: inline-block;
   position: absolute;
-  top: 10px;
+  top: 15px;
   /* right: 600px; */
   left: 975px;
   height: 46px;

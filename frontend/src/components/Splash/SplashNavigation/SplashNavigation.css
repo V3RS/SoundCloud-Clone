@@ -5,7 +5,7 @@
   align-items: center;
   /* padding: 15px; */
   /* margin-bottom: 10px; */
-  position: fixed;
+  position: absolute;
   top: 0px;
   width: 1240px;
   /* font: 100 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
@@ -13,6 +13,7 @@
   -webkit-font-smoothing: subpixel-antialiased; */
   /* background-color: #333; */
   height: 46px;
+  z-index: 1;
   /* transition: height 0.2s ease-in-out; */
   /* transition-property: height;
   transition-duration: 0.2s;

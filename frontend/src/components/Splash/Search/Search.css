@@ -61,12 +61,29 @@
   min-width: 164px;
   height: 46px;
   margin-right: 25px;
-  padding-top: 12px;
+  padding-top: 5px;
   border-radius: 5px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #search-container {
+  /* width: 1280px; */
+  background-color: white;
   display: flex;
   justify-content: space-between;
+  max-width: 800px;
+  /* position: absolute; */
+}
+
+#search-container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1280px;
+  /* height: 100px; */
+
+  background-color: white;
 }

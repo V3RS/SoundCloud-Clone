@@ -1,0 +1,62 @@
+#mob-img {
+  position: relative;
+  top: 0;
+  right: 200px;
+  /* border: 5px solid red; */
+}
+
+#mob-title {
+  /* border: 1px solid red; */
+  text-align: center;
+  position: relative;
+  bottom: 385px;
+  left: 370px;
+  font-size: 35px;
+  margin-bottom: 15px;
+  color: #242424;
+  font-weight: 500;
+}
+
+#mob-border {
+  position: relative;
+  bottom: 385px;
+  left: 563px;
+  margin-top: 22px;
+  height: 3.2px;
+  width: 70px;
+  background: linear-gradient(to right, #9feb58, #035700);
+}
+
+#mob-txt {
+  font-size: 23px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  color: #242424;
+  line-height: 1.5;
+  width: 300px;
+  position: relative;
+  bottom: 385px;
+  left: 560px;
+}
+
+#apl {
+  width: 135px;
+  height: 40px;
+  border-radius: 3px;
+  cursor: not-allowed;
+  background: url(./apl-dwlnd-btn.png);
+  position: relative;
+  bottom: 385px;
+  left: 560px;
+}
+
+#goog {
+  width: 115px;
+  height: 40px;
+  border-radius: 3px;
+  cursor: not-allowed;
+  background: url(./goog-dwld-btn.png);
+  position: relative;
+  bottom: 385px;
+  left: 565px;
+}

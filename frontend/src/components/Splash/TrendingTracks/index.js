@@ -1,9 +1,13 @@
 import React from "react";
+import "./TrendingTracks.css";
 
 export default function TrendingTracks() {
   return (
     <div>
-      <h1>Hear what’s trending in the SoundWave community</h1>
+      <p id="trending-tracks-title">
+        Hear what’s trending in the SoundWave community
+      </p>
+      <button id="trending-tracks-btn">Explore trending playlists</button>
     </div>
   );
 }

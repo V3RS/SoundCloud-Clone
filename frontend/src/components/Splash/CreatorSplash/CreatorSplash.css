@@ -1,0 +1,11 @@
+#creator-pic {
+  z-index: -11;
+}
+
+#creator-splash-container {
+  border: 1px solid black;
+  width: 1240px;
+  height: 350px;
+  position: relative;
+  bottom: 315px;
+}

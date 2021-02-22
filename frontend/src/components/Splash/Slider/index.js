@@ -14,15 +14,6 @@ export default function Slider() {
 
   return (
     <div className="splash-slider-container">
-      <div id="slider1title">Discover more with SoundWave Go+</div>
-      <p id="slider1text">
-        SoundCloud Go+ lets you listen offline, ad-free, with over 150 million
-        tracks — and growing.
-      </p>
-      <div id="slider1btns">
-        <a id="slider1btn1">Learn More</a>
-        <a id="slider1btn2">Try It Free Here</a>
-      </div>
       {SliderData.map((slide, i) => {
         return (
           <div className={i === slider ? "slide active" : "slide"} key={i}>
@@ -36,6 +27,15 @@ export default function Slider() {
           </div>
         );
       })}
+      <div id="slider1title">Discover more with SoundWave Go+</div>
+      <p id="slider1text">
+        SoundCloud Go+ lets you listen offline, ad-free, with over 150 million
+        tracks — and growing.
+      </p>
+      <div id="slider1btns">
+        <a id="slider1btn1">Learn More</a>
+        <a id="slider1btn2">Try It Free Here</a>
+      </div>
       <button className="slidbtns" onClick={slideChange}>
         left
       </button>

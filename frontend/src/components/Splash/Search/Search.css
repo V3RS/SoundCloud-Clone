@@ -70,6 +70,19 @@
 }
 
 #search-container {
+  /* width: 1280px; */
+  background-color: white;
   display: flex;
   justify-content: space-between;
+  max-width: 800px;
+  /* position: absolute; */
+}
+
+#search-container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1280px;
+
+  background-color: white;
 }

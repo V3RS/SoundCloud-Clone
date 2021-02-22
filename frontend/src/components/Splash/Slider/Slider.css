@@ -1,12 +1,32 @@
 .splash-slider-container {
   color: white;
+  overflow: hidden;
+  background-color: white;
 }
 
 #slider1title {
+  /* position: absolute; */
+  /* top: 25px; */
+  position: relative;
+  bottom: 310px;
+  /* top: 150px; */
+  /* display: flex; */
+  /* align-items: center; */
+  justify-content: center;
+  /* right: 10px; */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
   display: flex;
   justify-content: center;
-  position: fixed;
-  top: 140px;
+
+  /* display: flex; */
+  /* flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+
+  /* position: relative; */
+  /* top: 140px; */
   margin-bottom: 8px;
   font-size: 40px;
   font-weight: 100;
@@ -17,7 +37,32 @@
   max-width: 530px;
   text-align: center;
   position: relative;
-  top: 170px;
+  bottom: 310px;
+  left: 350px;
+  display: flex;
+  justify-content: center;
+  /* top: 170px; */
+  /* z-index: 1; */
+}
+
+.slider-img {
+  /* display: block;
+  margin-left: auto;
+  margin-right: auto; */
+  /* margin: auto; */
+  /* width: 40%; */
+  position: relative;
+  /* right: 340px; */
+  display: flex;
+  /* flex-flow: column nowrap; */
+  /* justify-content: center; */
+  align-items: center;
+  /* box-sizing: border-box; */
+  /* right: 20px; for 13 inch mac make a media query */
+  /* top: 5px; */
+  z-index: -10;
+  height: 450px;
+  width: 1240px;
 }
 
 #slider1btns {
@@ -25,7 +70,9 @@
   display: flex;
   justify-content: center;
   position: relative;
-  top: 180px;
+  bottom: 300px;
+  /* top: 180px; */
+  /* z-index: 1; */
 }
 
 #slider1btn1 {
@@ -33,9 +80,10 @@
   background: transparent;
   color: #fff;
   border-color: #ccc;
+  border: 1px solid #ccc;
   font-size: 17px;
   min-width: 164px;
-  height: 46px;
+  height: 30px;
   margin-right: 25px;
   padding-top: 12px;
   border-radius: 5px;
@@ -44,14 +92,53 @@
 #slider1btn2 {
   cursor: pointer;
   background-color: #15883e;
+  border: 1px solid #15883e;
   color: #fff;
   /* border-color: #ccc; */
   border: none;
   font-size: 17px;
   min-width: 164px;
-  height: 46px;
+  height: 33px;
   margin-right: 25px;
   padding-top: 12px;
   border-radius: 5px;
   text-align: center;
 }
+
+.slidbtns {
+  cursor: pointer;
+  position: relative;
+  bottom: 220px;
+  left: 570px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* top: 275px; */
+  /* left: 220px; */
+}
+
+.slide {
+  /* z-index: -10; */
+  transform: translateX(-33.3333%);
+  transition: transform 0.6s ease-in-out 0s;
+  width: 300%;
+}
+
+.slide.active {
+  transform: translateX(0%);
+  transition: transform 0.6s ease-in-out 0s;
+  width: 300%;
+  /* opacity: 1; */
+  /* transform: translateX(-50%); */
+  /* transform: scale(1.08); */
+}
+
+/* .carousel {
+  width: 303.2%;
+  height: 100%;
+  transform: translateX(-33%);
+  overflow: hidden;
+  display: flex;
+  transition: 10s ease;
+}  */

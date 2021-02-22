@@ -11,14 +11,8 @@
   z-index: -1;
   /* background-color: red; */
   /* background-image: url("./sliderImg2.png"); */
-  background-size: 900px 450px;
+  /* background-size: 900px 450px; */
   border-top: 5px solid #15883e;
-}
-
-.slider-img {
-  z-index: -1;
-  height: 450px;
-  width: 1240px;
 }
 
 .splash-container {
@@ -35,4 +29,15 @@
   margin-top: 50px;
   position: fixed;
   top: 450px;
+}
+
+.trend-tracks-container {
+  border: 1px solid red;
+  position: fixed;
+  top: 550px;
+  height: 660px;
+  width: 1180px;
+  display: flex;
+  justify-content: center;
+  overflow: scroll;
 }

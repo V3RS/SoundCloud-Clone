@@ -10,9 +10,15 @@
   box-sizing: border-box;
   z-index: -1;
   /* background-color: red; */
-  background-image: url("./splash-img.png");
+  /* background-image: url("./sliderImg2.png"); */
   background-size: 900px 450px;
   border-top: 5px solid #15883e;
+}
+
+.slider-img {
+  z-index: -1;
+  height: 450px;
+  width: 1240px;
 }
 
 .splash-container {

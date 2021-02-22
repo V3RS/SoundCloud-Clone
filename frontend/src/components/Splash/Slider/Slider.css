@@ -1,6 +1,7 @@
 .splash-slider-container {
   color: white;
   overflow: hidden;
+  background-color: white;
 }
 
 #slider1title {

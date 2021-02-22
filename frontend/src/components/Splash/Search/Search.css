@@ -83,6 +83,7 @@
   flex-direction: column;
   align-items: center;
   width: 1280px;
+  /* height: 100px; */
 
   background-color: white;
 }

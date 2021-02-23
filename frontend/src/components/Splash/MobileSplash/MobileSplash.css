@@ -5,6 +5,12 @@
   /* border: 5px solid red; */
 }
 
+#mob-container {
+  position: relative;
+  top: 55px;
+  /* background-color: #fff; */
+}
+
 #mob-title {
   /* border: 1px solid red; */
   text-align: center;

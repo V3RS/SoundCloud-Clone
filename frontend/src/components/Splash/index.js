@@ -6,6 +6,7 @@ import Search from "./Search";
 import TrendingTracks from "./TrendingTracks";
 import MobileSplash from "./MobileSplash";
 import CreatorSplash from "./CreatorSplash";
+import SplashFooter from "./SplashFooter";
 
 export default function Splash({ isLoaded }) {
   return (
@@ -25,7 +26,23 @@ export default function Splash({ isLoaded }) {
       <div id="bottom-splash">
         <MobileSplash />
         <CreatorSplash />
+        {/* <div id="thanks-container"> */}
+        <div id="thanks-splash">
+          <div id="thanks-content">
+            <div>Thanks for listening. Now join in.</div>
+            <p>
+              Save tracks, follow artists and build playlists. All for free.
+            </p>
+            <button id="splash-signup-btn">Create account</button>
+            <div id="splash-login-container">
+              <p id="splash-log-txt">Already have an account?</p>
+              <button id="splash-login-btn">Sign in</button>
+            </div>
+          </div>
+        </div>
+        {/* </div> */}
       </div>
+      <SplashFooter />
     </div>
   );
 }

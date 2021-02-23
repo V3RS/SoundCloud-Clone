@@ -21,6 +21,13 @@
   /* background-color: white;
   z-index: -11; */
 }
+#bottom-splash {
+  width: 1240px;
+  height: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .splash-container {
   display: flex;
@@ -28,6 +35,10 @@
   align-items: center;
   font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
     Garuda, Verdana, Tahoma, sans-serif;
+  position: absolute;
+  top: 0px;
+  /* overflow: hidden; */
+  /* height: 2500px; */
   /* background-colors: red; */
   /* z-index: -12; */
   /* height: 10000px; */
@@ -48,7 +59,9 @@
   /* border: 1px solid red; */
   /* position: fixed; */
   top: 550px;
-  height: 660px;
+  /* use the height below when data */
+  /* height: 660px; */
+  height: 160px;
   /* height: 10000px; */
   width: 1180px;
   display: flex;
@@ -61,9 +74,87 @@
   top: 5000px;
 } */
 
-#bottom-splash {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: auto;
+#thanks-splash {
+  /* position: relative; */
+  font-size: 36px;
+  font-weight: 100;
+  text-align: center;
+  color: #333;
+  /* border: 1px solid black; */
+  position: relative;
+  /* bottom: 210px; */
+  bottom: 315px;
+  background-color: white;
+  width: 1240px;
+  height: 525px;
 }
+
+#thanks-content {
+  position: relative;
+  top: 100px;
+}
+
+#thanks-content > p {
+  font-size: 24px;
+  margin-top: 7px;
+  position: relative;
+  top: 10px;
+}
+
+#splash-signup-btn {
+  cursor: pointer;
+  background-color: #15883e;
+  color: #fff;
+  /* border-color: #ccc; */
+  border: none;
+  font-size: 18px;
+  min-width: 200px;
+  height: 46px;
+  margin-right: 25px;
+  padding-top: 5px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 10px;
+  left: 525px;
+}
+
+#splash-login-container {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  width: 240px;
+  position: relative;
+  /* bottom: 185px; */
+  top: 25px;
+  left: 510px;
+  /* width: 1000px; */
+}
+
+#splash-log-txt {
+  font-size: 12px;
+  color: #333;
+  margin-top: 7px;
+  position: relative;
+  top: 7px;
+}
+
+#splash-login-btn {
+  width: 81px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+/* #thanks-container {
+  background-color: white;
+}
+
+#splash-btm {
+  background-color: white;
+} */

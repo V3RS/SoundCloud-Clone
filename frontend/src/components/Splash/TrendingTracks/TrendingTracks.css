@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  top: 470px;
+  /* top: 470px; */
   left: 200px;
   cursor: pointer;
   background-color: #15883e;
@@ -32,3 +32,10 @@
   border-radius: 5px;
   text-align: center;
 }
+/*
+#placeholder-img {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  width: 1000px;
+} */

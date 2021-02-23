@@ -1,0 +1,26 @@
+#splash-footer-container {
+  /* border-top: 1px solid #f2f2f2; */
+  position: relative;
+  bottom: 50px;
+  /* bottom: 100px; */
+  border-top: 1px solid #cccccc;
+  width: 1180px;
+  height: 40px;
+  overflow: hidden;
+}
+
+#splash-footer-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.splash-footer-content {
+  position: relative;
+  cursor: pointer;
+  top: 10px;
+  font-size: 14px;
+  color: #cccccc;
+  text-decoration: none;
+  /* border-bottom: 1px solid black; */
+  /* left: 10px; */
+}

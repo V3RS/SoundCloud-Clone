@@ -4,7 +4,7 @@ import mobImg from "./mob-sc.jpg";
 
 export default function MobileSplash() {
   return (
-    <div>
+    <div id="mob-container">
       <div id="mob-img">
         <img src={mobImg} alt="mobile image" />
       </div>

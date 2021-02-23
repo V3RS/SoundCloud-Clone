@@ -23,10 +23,11 @@
 }
 #bottom-splash {
   width: 1240px;
-  height: 1500px;
+  height: 120vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* margin-bottom: -500px; */
 }
 
 .splash-container {

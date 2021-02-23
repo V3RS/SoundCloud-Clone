@@ -13,7 +13,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div>
+    <div id="container">
       {isLoaded && (
         <Switch>
           <Route exact path="/">

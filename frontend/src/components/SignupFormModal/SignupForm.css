@@ -7,7 +7,8 @@
   font-size: 20px;
   background-color: rgb(227, 233, 227);
   margin: 0 auto;
-  max-width: 450px;
+  width: 400px;
+  height: 500px;
   padding: 20px;
 }
 

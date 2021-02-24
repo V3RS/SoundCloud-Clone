@@ -34,8 +34,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
+  /* font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif; */
   position: absolute;
   top: 0px;
   /* overflow: hidden; */

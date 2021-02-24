@@ -16,7 +16,8 @@
   position: relative;
   /* use this top when */
   /* top: 470px; */
-  left: 200px;
+  /* left: 200px; */
+  left: 150px;
   cursor: pointer;
   background-color: #15883e;
   border: 1px solid #15883e;

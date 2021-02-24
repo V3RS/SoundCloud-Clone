@@ -37,47 +37,52 @@ function SignupFormPage() {
 
   return (
     <div className="signup-container">
+      <div id="signup-title">Welcome To SoundWave</div>
       <form onSubmit={handleSubmit}>
-        <label>
-          Email
-          <input
-            type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="signup-inputs"
-            required
-          />
-        </label>
-        <label>
-          Username
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            className="signup-inputs"
-            required
-          />
-        </label>
-        <label>
-          Password
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="signup-inputs"
-            required
-          />
-        </label>
-        <label>
-          Confirm Password
-          <input
-            type="password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            className="signup-inputs"
-            required
-          />
-        </label>
+        {/* <label>
+          Email */}
+        <input
+          type="text"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="signup-inputs"
+          placeholder="Email"
+          required
+        />
+        {/* </label> */}
+        {/* <label>
+          Username */}
+        <input
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          className="signup-inputs"
+          placeholder="Username"
+          required
+        />
+        {/* </label> */}
+        {/* <label>
+          Password */}
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="signup-inputs"
+          placeholder="Password"
+          required
+        />
+        {/* </label> */}
+        {/* <label>
+          Confirm Password */}
+        <input
+          type="password"
+          value={confirmPassword}
+          onChange={(e) => setConfirmPassword(e.target.value)}
+          className="signup-inputs"
+          placeholder="Confirm Password"
+          required
+        />
+        {/* </label> */}
         <button className="signup-button" type="submit">
           Sign Up
         </button>

@@ -150,6 +150,7 @@
   font-size: 16px;
   color: #333;
   text-align: center;
+  cursor: pointer;
 }
 
 /* #thanks-container {
@@ -159,3 +160,26 @@
 #splash-btm {
   background-color: white;
 } */
+/*
+.Overlay {
+  background-color: hsla(0, 0%, 94.9%, 0.9);
+} */
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  /* background-color: hsla(0, 0%, 94.9%, 0.9); */
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+  transform: translateY(-100px);
+  /* transform: translateY(100px); */
+  /* transition: all 500ms ease-in-out; */
+}

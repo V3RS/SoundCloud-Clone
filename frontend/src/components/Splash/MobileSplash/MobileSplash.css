@@ -16,7 +16,8 @@
   text-align: center;
   position: relative;
   bottom: 385px;
-  left: 370px;
+  /* left: 370px; */
+  left: 350px;
   font-size: 35px;
   margin-bottom: 15px;
   color: #242424;

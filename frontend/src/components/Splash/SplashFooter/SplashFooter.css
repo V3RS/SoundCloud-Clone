@@ -6,7 +6,7 @@
   border-top: 1px solid #cccccc;
   width: 1180px;
   height: 40px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #splash-footer-list {

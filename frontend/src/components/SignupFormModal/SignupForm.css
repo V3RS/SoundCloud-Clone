@@ -1,5 +1,5 @@
 .signup-container {
-  border: 1px solid black;
+  /* border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: space-between;
@@ -7,8 +7,33 @@
   font-size: 20px;
   background-color: rgb(227, 233, 227);
   margin: 0 auto;
+  width: 400px;
+  height: 500px;
+  padding: 20px; */
+  /* border: 1px solid black; */
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  /* justify-content: center; */
+  width: 100%;
+  /* align-items: space-between; */
+  font-size: 20px;
+  /* background-color: rgb(227, 233, 227); */
+  margin: 0 auto;
   max-width: 450px;
+  width: 1000px;
+  height: 500px;
+  box-sizing: border-box;
   padding: 20px;
+  /* background-color: #cccccc; */
+}
+
+#signup-title {
+  position: absolute;
+  top: 60px;
+  right: 62px;
+  font-size: 35px;
+  font-weight: bold;
 }
 
 #createAccBtn {
@@ -19,20 +44,39 @@
 }
 
 .signup-inputs {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   margin: 1%;
   font-size: 15px;
-  width: 100%;
+  width: 100%; */
+  display: flex;
+  justify-content: center;
+  margin: 1%;
+  font-size: 18px;
+  width: 400px;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 10px;
 }
 
 .signup-button {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   padding: 5%;
   font-size: 20px;
   border-radius: 30px;
   width: 100%;
+  color: #fff;
+  background-color: #15883e;
+  cursor: pointer; */
+  font-size: 16px;
+  line-height: 18px;
+  padding: 10px 15px;
+  height: 40px;
+  width: 400px;
+  border-radius: 5px;
   color: #fff;
   background-color: #15883e;
   cursor: pointer;

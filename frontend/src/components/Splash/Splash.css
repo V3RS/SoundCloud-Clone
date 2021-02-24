@@ -183,3 +183,7 @@
   /* transform: translateY(100px); */
   /* transition: all 500ms ease-in-out; */
 }
+
+/* .ReactModal__Content--after-open {
+  opacity: 1;
+} */

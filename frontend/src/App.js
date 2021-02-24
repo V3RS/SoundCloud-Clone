@@ -20,7 +20,7 @@ function App() {
             <Splash isLoaded={isLoaded} />
           </Route>
           <Navigation isLoaded={isLoaded} />
-          <Route path="/test"></Route>
+          <Route path="/dashboard"></Route>
         </Switch>
       )}
     </div>

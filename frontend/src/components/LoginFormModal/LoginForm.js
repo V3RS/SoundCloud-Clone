@@ -14,12 +14,13 @@ export default function LoginFormPage() {
   const [errors, setErrors] = useState([]);
 
   // if user exists return to home page
-  if (sessionUser) return <Redirect to="/" />;
+  if (sessionUser) return <Redirect to="/dashboard" />;
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors([]);
     // use log in function and dispatch to backend
+    history.push("/dashboard");
     return dispatch(sessionActions.login({ credential, password })).catch(
       async (res) => {
         const data = await res.json();
@@ -30,6 +31,7 @@ export default function LoginFormPage() {
 
   const demoSubmit = (e) => {
     e.preventDefault();
+    history.push("/dashboard");
     return dispatch(sessionActions.demoLogin());
   };
 

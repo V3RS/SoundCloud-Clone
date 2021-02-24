@@ -38,17 +38,22 @@
 #imgLogo {
   width: 25%;
   background-color: #1fb453;
+  position: relative;
+  left: 15px;
 }
 
 #logo {
   height: 46px;
-  width: 184px;
+  max-width: 184px;
   background-color: #1fb453;
   display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
   position: fixed;
   left: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
+  /* padding-left: 10px; */
+  /* padding-right: 10px; */
   /* border: 1px solid red; */
 }
 
@@ -58,12 +63,14 @@
   /* border: 1px solid blue; */
   display: flex;
   position: relative;
-  bottom: 5px;
-  right: 10px;
-  background-color: #1fb453;
+  bottom: 4px;
+  left: 5px;
+  font-family: sans-serif;
+  font-weight: 600;
+  /* background-color: #1fb453; */
   cursor: pointer;
   text-align: center;
-  font-size: 20px;
+  font-size: 14px;
   color: whitesmoke;
   margin: 10px;
   padding: 10px;

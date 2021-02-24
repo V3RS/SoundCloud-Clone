@@ -35,42 +35,43 @@ export default function LoginFormPage() {
 
   return (
     <div className="login-container">
+      <div id="login-title">Welcome back to SoundWave</div>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>
-            Email address or username
-            <input
-              type="text"
-              value={credential}
-              onChange={(e) => setCredential(e.target.value)}
-              placeholder="Email address or username"
-              className="login-inputs"
-              required
-            />
-          </label>
+          {/* <label>
+            Email address or username */}
+          <input
+            type="text"
+            value={credential}
+            onChange={(e) => setCredential(e.target.value)}
+            placeholder="Email address or username"
+            className="login-inputs"
+            required
+          />
+          {/* </label> */}
         </div>
         <div>
-          <label>
-            Password
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Password"
-              className="login-inputs"
-              required
-            />
-          </label>
+          {/* <label>
+            Password */}
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            className="login-inputs"
+            required
+          />
+          {/* </label> */}
         </div>
         <button className="loginFormBtns" type="submit">
           Log In
         </button>
-        <button
+        {/* <button
           className="loginFormBtns"
           onClick={() => history.push("/signup")}
         >
           Register Here
-        </button>
+        </button> */}
       </form>
       <form onSubmit={demoSubmit}>
         <button className="loginFormBtns" type="submit">

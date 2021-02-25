@@ -7,20 +7,27 @@ const getSongs = (songs) => {
   };
 };
 
-const getAllSongs = () => async (dispatch) => {
+export const getAllSongs = () => async (dispatch) => {
   const res = await fetch("/api/songs");
   const data = await res.json();
+  //   console.log(data);
   dispatch(getSongs(data));
   return res;
 };
 
-const initialState = { songs: null };
+const initialState = {
+  songs: null,
+  //   songs: null;
+};
 const songsReducer = (state = initialState, action) => {
   let newState;
   switch (action.type) {
     case GET_ALL_SONGS:
-      newState = Object.assign({}, state);
-      newState.songs = action.songs;
+      newState = Object.assign({}, state, { songs: action.songs });
       return newState;
+    default:
+      return state;
   }
 };
+
+export default songsReducer;

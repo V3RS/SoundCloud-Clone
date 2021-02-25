@@ -7,6 +7,8 @@ import TrendingTracks from "./TrendingTracks";
 import MobileSplash from "./MobileSplash";
 import CreatorSplash from "./CreatorSplash";
 import SplashFooter from "./SplashFooter";
+import MusicPlayer from "../MusicPlayer";
+
 import Modal from "react-modal";
 import SignupForm from "../SignupFormModal/SignupForm";
 import LoginForm from "../LoginFormModal/LoginForm";

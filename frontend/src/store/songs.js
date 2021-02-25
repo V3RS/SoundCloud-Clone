@@ -15,10 +15,7 @@ export const getAllSongs = () => async (dispatch) => {
   return res;
 };
 
-const initialState = {
-  songs: null,
-  //   songs: null;
-};
+const initialState = { songs: null };
 const songsReducer = (state = initialState, action) => {
   let newState;
   switch (action.type) {

@@ -7,6 +7,8 @@ import TrendingTracks from "./TrendingTracks";
 import MobileSplash from "./MobileSplash";
 import CreatorSplash from "./CreatorSplash";
 import SplashFooter from "./SplashFooter";
+import MusicPlayer from "../MusicPlayer";
+
 import Modal from "react-modal";
 import SignupForm from "../SignupFormModal/SignupForm";
 import LoginForm from "../LoginFormModal/LoginForm";
@@ -75,8 +77,10 @@ export default function Splash({ isLoaded }) {
                 isOpen={signupState}
                 closeTimeoutMS={500}
                 onRequestClose={closeModal1}
-                style={customStyles}
+                // style={customStyles}
                 contentLabel="Signup Modal"
+                overlayClassName="OuterModal"
+                className="InnerModal"
               >
                 <SignupForm />
               </Modal>
@@ -94,8 +98,10 @@ export default function Splash({ isLoaded }) {
                   isOpen={loginState}
                   closeTimeoutMS={500}
                   onRequestClose={closeModal2}
-                  style={customStyles}
+                  // style={customStyles}
                   contentLabel="Login Modal"
+                  overlayClassName="OuterModal"
+                  className="InnerModal"
                 >
                   <LoginForm />
                 </Modal>
@@ -103,9 +109,9 @@ export default function Splash({ isLoaded }) {
             </div>
           </div>
         </div>
+        <SplashFooter />
         {/* </div> */}
       </div>
-      <SplashFooter />
     </div>
   );
 }

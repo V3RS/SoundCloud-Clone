@@ -37,7 +37,7 @@
   max-width: 530px;
   text-align: center;
   position: relative;
-  bottom: 310px;
+  bottom: 320px;
   left: 350px;
   display: flex;
   justify-content: center;
@@ -51,7 +51,7 @@
   margin-right: auto; */
   /* margin: auto; */
   /* width: 40%; */
-  position: relative;
+  /* position: relative; */
   /* right: 340px; */
   display: flex;
   /* flex-flow: column nowrap; */
@@ -60,9 +60,11 @@
   /* box-sizing: border-box; */
   /* right: 20px; for 13 inch mac make a media query */
   /* top: 5px; */
-  z-index: -10;
+  /* z-index: -10; */
   height: 450px;
-  width: 1240px;
+  min-width: 1240px;
+  transition: all;
+  /* transform: translateX(100%); */
 }
 
 #slider1btns {
@@ -71,6 +73,7 @@
   justify-content: center;
   position: relative;
   bottom: 300px;
+  left: 30px;
   /* top: 180px; */
   /* z-index: 1; */
 }
@@ -106,10 +109,23 @@
 }
 
 .slidbtns {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  /* width: 100%; */
+  align-items: center;
   cursor: pointer;
   position: relative;
-  bottom: 220px;
-  left: 570px;
+  top: 120px;
+  right: 230px;
+  margin-left: 10px;
+  border-radius: 100px;
+  height: 18px;
+  width: 18px;
+  background: transparent;
+  border: 1.25px solid white;
+  /* bottom: 220px; */
+  /* left: 570px; */
   /* display: flex; */
   /* flex-direction: column; */
   /* justify-content: center; */
@@ -120,13 +136,18 @@
 
 .slide {
   /* z-index: -10; */
-  transform: translateX(-33.3333%);
-  transition: transform 0.6s ease-in-out 0s;
-  width: 300%;
+  /* transform: translateX(-33.3333%); */
+  /* transition: transform 0.6s ease-in-out 0s; */
+  transition: all;
+  max-width: 1240px;
+  display: flex;
+  overflow-x: none;
+  /* z-index: -11; */
 }
 
-.slide.active {
-  transform: translateX(0%);
+.slide-add {
+  transition: all;
+  transform: translateX(-100%);
   transition: transform 0.6s ease-in-out 0s;
   width: 300%;
   /* opacity: 1; */

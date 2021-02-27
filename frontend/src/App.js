@@ -1,16 +1,23 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import Splash from "./components/Splash";
+import Dashboard from "./components/Dashboard";
+
+import { getAllSongs } from "./store/songs";
 
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
+    dispatch(getAllSongs());
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
   }, [dispatch]);
+
+  const songs = useSelector((state) => state.songsRed.songs);
+  console.log(songs);
 
   return (
     <div id="container">
@@ -19,8 +26,25 @@ function App() {
           <Route exact path="/">
             <Splash isLoaded={isLoaded} />
           </Route>
-          <Navigation isLoaded={isLoaded} />
-          <Route path="/dashboard"></Route>
+          <Route path="/dashboard">
+            <Navigation isLoaded={isLoaded} />
+            <Dashboard />
+          </Route>
+          <Route path="/test">
+            <Navigation isLoaded={isLoaded} />
+            {songs?.allSongs.map((song) => {
+              return (
+                <div key={song.id}>
+                  <img src={song.imgUrl}></img>
+                  <audio
+                    controls
+                    controlsList="nodownload"
+                    src={song.audioFile}
+                  ></audio>
+                </div>
+              );
+            })}
+          </Route>
         </Switch>
       )}
     </div>

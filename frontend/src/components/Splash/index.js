@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SplashNavigation from "./SplashNavigation";
 import Slider from "./Slider";
 import "./Splash.css";

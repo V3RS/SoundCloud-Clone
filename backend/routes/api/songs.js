@@ -13,4 +13,12 @@ router.get(
   })
 );
 
+router.get(
+  "/twelve",
+  asyncHandler(async (req, res) => {
+    const twelveSongs = await Song.findAll({ limit: 12 });
+    return res.json({ twelveSongs });
+  })
+);
+
 module.exports = router;

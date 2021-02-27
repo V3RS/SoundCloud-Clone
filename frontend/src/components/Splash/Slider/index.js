@@ -26,10 +26,11 @@ export default function Slider() {
       const slideImg = sliderCopy.shift();
       console.log("img1", slideImg);
       sliderCopy.push(slideImg);
-      const newSlider = (state, props) => {
-        return sliderCopy;
-      };
-      setSlider(newSlider);
+      // const newSlider = (state, props) => {
+      //   if (!slider) return sliderCopy;
+      //   else return null;
+      // };
+      setSlider(slider);
       console.log("images after push: ------ >", slider);
     }, 600);
   };
@@ -78,7 +79,7 @@ export default function Slider() {
       </div>,
     ];
     setSlider(imgs);
-  });
+  }, []);
 
   // const transform = `translateX(${slider * -50}%)`;
   // style={{ transform }}

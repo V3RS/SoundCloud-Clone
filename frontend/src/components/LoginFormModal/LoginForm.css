@@ -17,7 +17,7 @@
 
 #login-title {
   position: absolute;
-  top: 60px;
+  top: 310px;
   font-size: 35px;
   font-weight: bold;
 }
@@ -69,4 +69,8 @@
   width: 75px;
   border-radius: 5px;
   background: transparent;
+
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
 }

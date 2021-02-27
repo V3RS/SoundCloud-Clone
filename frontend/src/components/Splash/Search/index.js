@@ -16,7 +16,9 @@ export default function Search() {
         <div id="search-or-div">
           <p id="search-or">or</p>
         </div>
-        <button id="upload-search-btn">Upload your own</button>
+        <div id="up-btn-div">
+          <button id="upload-search-btn">Upload your own</button>
+        </div>
       </div>
     </div>
   );

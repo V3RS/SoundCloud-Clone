@@ -77,8 +77,10 @@ export default function Splash({ isLoaded }) {
                 isOpen={signupState}
                 closeTimeoutMS={500}
                 onRequestClose={closeModal1}
-                style={customStyles}
+                // style={customStyles}
                 contentLabel="Signup Modal"
+                overlayClassName="OuterModal"
+                className="InnerModal"
               >
                 <SignupForm />
               </Modal>
@@ -96,8 +98,10 @@ export default function Splash({ isLoaded }) {
                   isOpen={loginState}
                   closeTimeoutMS={500}
                   onRequestClose={closeModal2}
-                  style={customStyles}
+                  // style={customStyles}
                   contentLabel="Login Modal"
+                  overlayClassName="OuterModal"
+                  className="InnerModal"
                 >
                   <LoginForm />
                 </Modal>
@@ -105,9 +109,9 @@ export default function Splash({ isLoaded }) {
             </div>
           </div>
         </div>
+        <SplashFooter />
         {/* </div> */}
       </div>
-      <SplashFooter />
     </div>
   );
 }

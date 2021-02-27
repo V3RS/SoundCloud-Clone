@@ -41,8 +41,10 @@ function SignupFormModal() {
         isOpen={signupState}
         closeTimeoutMS={500}
         onRequestClose={closeModal}
-        style={customStyles}
+        // style={customStyles}
         contentLabel="Signup Modal"
+        overlayClassName="OuterModal"
+        className="InnerModal"
       >
         <SignupForm />
       </Modal>

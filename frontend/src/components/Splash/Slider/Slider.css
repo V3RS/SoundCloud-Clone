@@ -37,7 +37,7 @@
   max-width: 530px;
   text-align: center;
   position: relative;
-  bottom: 310px;
+  bottom: 320px;
   left: 350px;
   display: flex;
   justify-content: center;
@@ -109,10 +109,21 @@
 }
 
 .slidbtns {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  /* width: 100%; */
+  align-items: center;
   cursor: pointer;
   position: relative;
-  top: 60px;
-  right: 220px;
+  top: 120px;
+  right: 230px;
+  margin-left: 10px;
+  border-radius: 100px;
+  height: 18px;
+  width: 18px;
+  background: transparent;
+  border: 1.25px solid white;
   /* bottom: 220px; */
   /* left: 570px; */
   /* display: flex; */

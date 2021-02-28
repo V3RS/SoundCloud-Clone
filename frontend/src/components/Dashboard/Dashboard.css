@@ -1,6 +1,8 @@
 #top-dashboard {
   width: 1240px;
   background-color: white;
+  margin-top: 46px;
+  height: 100%;
   /* background-color: white;
     z-index: -11; */
 }
@@ -17,8 +19,8 @@
 
 .dashboard-tracks-container {
   /* border: 1px solid red; */
-  /* position: fixed; */
-  top: 550px;
+  position: relative;
+  top: 150px;
   /* use the height below when data */
   height: 700px;
   /* height: 160px; */

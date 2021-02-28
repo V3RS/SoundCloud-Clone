@@ -35,6 +35,12 @@ function SignupFormPage() {
     ]);
   };
 
+  const demoSubmit = (e) => {
+    e.preventDefault();
+    history.push("/dashboard");
+    return dispatch(sessionActions.demoLogin());
+  };
+
   return (
     <div className="signup-container">
       <div id="signup-title">Welcome To SoundWave</div>
@@ -86,13 +92,11 @@ function SignupFormPage() {
         <button className="signup-button" type="submit">
           Sign Up
         </button>
-        <button
-          type="button"
-          className="signup-button"
-          onClick={() => history.push("/login")}
-        >
-          Log In Here
-        </button>
+        <form onSubmit={demoSubmit}>
+          <button className="loginFormBtns" type="submit">
+            Demo Log In
+          </button>
+        </form>
 
         <ul>
           {errors.map((error, idx) => (

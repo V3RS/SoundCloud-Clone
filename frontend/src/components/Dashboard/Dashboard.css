@@ -1,0 +1,59 @@
+#top-dashboard {
+  width: 1240px;
+  background-color: white;
+  /* background-color: white;
+    z-index: -11; */
+}
+
+.dashboard-songs {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  height: 515px;
+  width: 1200px;
+  overflow: none;
+}
+
+.dashboard-tracks-container {
+  /* border: 1px solid red; */
+  /* position: fixed; */
+  top: 550px;
+  /* use the height below when data */
+  height: 700px;
+  /* height: 160px; */
+  /* height: 10000px; */
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  /* overflow: scroll; */
+}
+
+.dashboard-cover-container {
+  /* display: flex; */
+  height: 215px;
+  width: 180px;
+  margin-left: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  /* display: flex;
+  flex-wrap: wrap; */
+}
+
+.dashboard-cover {
+  height: 180px;
+  width: 180px;
+}
+
+.dashboard-cover-title {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.dashboard-cover-artist {
+  color: #999;
+  text-decoration: none;
+  font-size: 12px;
+}

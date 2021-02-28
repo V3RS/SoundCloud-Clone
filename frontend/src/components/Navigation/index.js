@@ -26,16 +26,18 @@ function Navigation({ isLoaded }) {
 
   return (
     <div className="navbar">
-      <nav id="nav">
-        <div id="logo">
-          <img id="imgLogo" src={logo} />
-          <NavLink id="homeBtn" exact to="/">
-            SOUNDWAVE
-          </NavLink>
-        </div>
+      <div id="nav-content">
+        <nav id="nav">
+          <div id="logo">
+            <img id="imgLogo" src={logo} />
+            <NavLink id="homeBtn" exact to="/dashboard">
+              SOUNDWAVE
+            </NavLink>
+          </div>
 
-        {isLoaded && sessionLinks}
-      </nav>
+          {isLoaded && sessionLinks}
+        </nav>
+      </div>
     </div>
   );
 }

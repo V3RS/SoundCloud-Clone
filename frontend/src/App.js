@@ -27,8 +27,7 @@ function App() {
             <Splash isLoaded={isLoaded} />
           </Route>
           <Route path="/dashboard">
-            <Navigation isLoaded={isLoaded} />
-            <Dashboard />
+            <Dashboard isLoaded={isLoaded} />
           </Route>
           <Route path="/test">
             <Navigation isLoaded={isLoaded} />

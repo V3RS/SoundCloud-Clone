@@ -30,7 +30,7 @@ export default function Slider() {
       //   if (!slider) return sliderCopy;
       //   else return null;
       // };
-      setSlider(slider);
+      setSlider(sliderCopy);
       console.log("images after push: ------ >", slider);
     }, 600);
   };

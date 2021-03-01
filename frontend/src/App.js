@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import Splash from "./components/Splash";
@@ -17,7 +17,7 @@ function App() {
   }, [dispatch]);
 
   const songs = useSelector((state) => state.songsRed.songs);
-  console.log(songs);
+  // console.log(songs);
 
   return (
     <div id="container">
@@ -27,8 +27,7 @@ function App() {
             <Splash isLoaded={isLoaded} />
           </Route>
           <Route path="/dashboard">
-            <Navigation isLoaded={isLoaded} />
-            <Dashboard />
+            <Dashboard isLoaded={isLoaded} />
           </Route>
           <Route path="/test">
             <Navigation isLoaded={isLoaded} />
@@ -44,6 +43,9 @@ function App() {
                 </div>
               );
             })}
+          </Route>
+          <Route>
+            <Redirect to="/" />
           </Route>
         </Switch>
       )}

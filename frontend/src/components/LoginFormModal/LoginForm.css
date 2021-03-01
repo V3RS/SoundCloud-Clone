@@ -11,8 +11,39 @@
   margin: 0 auto;
   max-width: 450px;
   width: 1000px;
-  height: 500px;
+  height: 550px;
   box-sizing: border-box;
+}
+
+.login-or {
+  margin: 1em auto;
+  position: relative;
+  text-align: center;
+  font-size: 16px;
+  /* font-weight: 800; */
+}
+
+.before-or {
+  display: inline-block;
+  position: relative;
+  right: 30px;
+  width: 172px;
+  top: 100px;
+  border-top: 1px solid #333;
+  content: " ";
+  position: absolute;
+  top: 0.7em;
+}
+.after-or {
+  display: inline-block;
+  position: relative;
+  left: 30px;
+  width: 172px;
+  top: 100px;
+  border-top: 1px solid #333;
+  content: " ";
+  position: absolute;
+  top: 0.7em;
 }
 
 #login-title {
@@ -33,6 +64,15 @@
   border-radius: 5px;
   border: 1px solid #ccc;
   padding-left: 10px;
+}
+
+#demoBtn {
+  background-color: black;
+}
+
+#demoBtn:hover {
+  background-color: rgb(20, 20, 20);
+  /* color: black; */
 }
 
 .loginFormBtns {
@@ -73,4 +113,19 @@
   /* display: flex;
   flex-direction: column;
   align-items: center; */
+}
+
+.form2-errors {
+  color: red;
+  font-size: 14px;
+  text-decoration: none;
+  /* list-style-type: none; */
+  /* width: 100%; */
+  position: relative;
+  top: 20px;
+  right: 80px;
+  /* border: 1px solid red; */
+  /* right: 840px; */
+  /* top: 220px; */
+  /* min-width: 600px; */
 }

@@ -5,6 +5,7 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import Splash from "./components/Splash";
 import Dashboard from "./components/Dashboard";
+import SongPage from "./components/SongPage";
 
 import { getAllSongs } from "./store/songs";
 
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/dashboard">
             <Dashboard isLoaded={isLoaded} />
+          </Route>
+          <Route path="/songs/:songId">
+            <SongPage isLoaded={isLoaded} />
           </Route>
           <Route path="/test">
             <Navigation isLoaded={isLoaded} />

@@ -14,6 +14,15 @@ router.get(
 );
 
 router.get(
+  "/:id",
+  asyncHandler(async (req, res) => {
+    const songId = req.params.id;
+    const currentSong = await Song.findByPk(songId);
+    return res.json({ currentSong });
+  })
+);
+
+router.get(
   "/twelve",
   asyncHandler(async (req, res) => {
     const twelveSongs = await Song.findAll({ limit: 12 });

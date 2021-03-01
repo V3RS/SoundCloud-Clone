@@ -1,7 +1,7 @@
 #splash-footer-container {
   /* border-top: 1px solid #f2f2f2; */
   position: relative;
-  bottom: 200px;
+  bottom: 370px;
   /* bottom: 100px; */
   border-top: 1px solid #cccccc;
   width: 1180px;
@@ -12,7 +12,7 @@
 
 #splash-footer-list {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .splash-footer-content {
@@ -22,6 +22,7 @@
   font-size: 14px;
   color: #cccccc;
   text-decoration: none;
+  margin-left: 30px;
   /* border-bottom: 1px solid black; */
   /* left: 10px; */
 }

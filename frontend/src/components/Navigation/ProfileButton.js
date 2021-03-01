@@ -40,15 +40,16 @@ function ProfileButton({ user }) {
         <i className="fas fa-ellipsis-h"></i>
       </button>
       {showMenu && (
-        <ul className="profile-dropdown">
-          <li>Hello {user.username}!</li>
-          <li>Email: {user.email}</li>
-          <li>
-            <button className="nav-bar-btn" onClick={logout}>
-              Log Out
-            </button>
-          </li>
-        </ul>
+        <div className="drop-down-container">
+          <ul className="profile-dropdown">
+            <li>Hello {user.username}!</li>
+            <li>
+              <button className="logout-btn" onClick={logout}>
+                Log Out
+              </button>
+            </li>
+          </ul>
+        </div>
       )}
     </>
   );

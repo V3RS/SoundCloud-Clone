@@ -14,7 +14,7 @@ export default function TrendingTracks() {
   }, [dispatch]);
 
   const trendingSongs = useSelector((state) => state.songsRed.trendingSongs);
-  console.log(trendingSongs);
+  // console.log(trendingSongs);
 
   return (
     <div className="tr-container">

@@ -42,8 +42,10 @@ function LoginFormModal() {
         isOpen={loginState}
         closeTimeoutMS={500}
         onRequestClose={closeModal}
-        style={customStyles}
+        // style={customStyles}
         contentLabel="Login Modal"
+        overlayClassName="OuterModal"
+        className="InnerModal"
       >
         <LoginForm />
       </Modal>

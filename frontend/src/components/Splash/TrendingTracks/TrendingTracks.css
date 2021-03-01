@@ -12,13 +12,14 @@
 
 #trending-tracks-btn {
   display: flex;
+  /* flex-direction: column; */
   justify-content: center;
   position: relative;
 
   /* use this top when */
-  /* top: 470px; */
+  top: 0px;
   /* left: 200px; */
-  left: 150px;
+  /* left: 150px; */
   cursor: pointer;
   background-color: #15883e;
   border: 1px solid #15883e;
@@ -42,3 +43,56 @@
   height: 300px;
   width: 1000px;
 } */
+
+.trending-covers-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  height: 515px;
+  width: 1200px;
+  overflow: none;
+}
+
+.trending-cover-container {
+  /* display: flex; */
+  height: 215px;
+  width: 180px;
+  margin-left: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  /* display: flex;
+  flex-wrap: wrap; */
+}
+
+.trending-cover {
+  height: 180px;
+  width: 180px;
+}
+
+.trending-cover-title {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.trending-cover-artist {
+  color: #999;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.tr-container {
+  position: relative;
+  top: 20px;
+  height: 515px;
+  width: 1200px;
+}
+
+/* KEY TO CSS CENTERING!!!!!!!!!!!!!!!!!! */
+.tt-btn-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}

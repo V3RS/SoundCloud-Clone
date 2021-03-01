@@ -1,12 +1,13 @@
 #splash-footer-container {
   /* border-top: 1px solid #f2f2f2; */
   position: relative;
-  bottom: 50px;
+  bottom: 200px;
   /* bottom: 100px; */
   border-top: 1px solid #cccccc;
   width: 1180px;
   height: 40px;
   /* overflow: hidden; */
+  /* background: white; */
 }
 
 #splash-footer-list {

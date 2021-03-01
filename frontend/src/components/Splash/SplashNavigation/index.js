@@ -14,7 +14,7 @@ function SplashNavigation({ isLoaded }) {
 
   let sessionLinks;
   if (sessionUser) {
-    sessionLinks = <ProfileButton user={sessionUser} />;
+    sessionLinks = undefined;
   } else {
     sessionLinks = (
       <div className="splash-navBtnContainer">

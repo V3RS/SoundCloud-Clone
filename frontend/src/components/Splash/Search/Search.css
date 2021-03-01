@@ -1,7 +1,9 @@
 #search-splash {
   background: #f0f0f0;
   /* background: rgba(211, 211, 211, 0.411); */
-  width: 520px;
+  position: relative;
+  right: 10px;
+  width: 470px;
   border: none;
   height: 45px;
   padding: 0;
@@ -14,7 +16,7 @@
 #search-btn {
   cursor: pointer;
   /* background: rgba(211, 211, 211, 0.411); */
-  background: #f0f0f0;
+  background-color: #f0f0f0;
   /* margin-right: 18px; */
   border: none;
   height: 45px;
@@ -24,13 +26,19 @@
   border-radius: 0 3px 3px 0;
   background: url(https://a-v2.sndcdn.com/assets/images/search-dbfe5cbb.svg)
     15px 15px no-repeat;
-  position: relative;
-  top: 5px;
-  left: 5px;
+  /* position: relative; */
+  /* top: 15px; */
+  /* left: 5px; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
   background-size: 40%;
 }
 
 #search-or {
+  /* top: 200px; */
+  /* right: 50px; */
   font-size: 20px;
   padding-right: 20px;
   /* padding-bottom: 80px; */
@@ -39,16 +47,22 @@
 }
 
 #search-btn-div {
-  width: 60px;
+  background-color: #f0f0f0;
+  width: 50px;
   /* border: 1px solid black; */
   position: relative;
-  bottom: 5px;
+  right: 10px;
+  /* bottom: 5px; */
+  height: 45px;
 }
 
 #search-or-div {
   /* border: 1px solid black; */
+  /* position: relative; */
+  /* top: 20px; */
   position: relative;
-  bottom: 15px;
+  left: 10px;
+  top: 5px;
 }
 
 #upload-search-btn {
@@ -67,6 +81,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#up-btn-div {
+  position: relative;
+  left: 10px;
 }
 
 #search-container {

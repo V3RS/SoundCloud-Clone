@@ -3,6 +3,7 @@ import * as sessionActions from "../../store/session";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
 import "./LoginForm.css";
+// import { closeLogin } from "../../store/modal";
 
 export default function LoginFormPage() {
   const dispatch = useDispatch();
@@ -14,28 +15,41 @@ export default function LoginFormPage() {
   const [errors, setErrors] = useState([]);
 
   // if user exists return to home page
-  if (sessionUser) return <Redirect to="/" />;
+  if (sessionUser) return <Redirect to="/dashboard" />;
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors([]);
     // use log in function and dispatch to backend
-    return dispatch(sessionActions.login({ credential, password })).catch(
+    dispatch(sessionActions.login({ credential, password })).catch(
       async (res) => {
         const data = await res.json();
         if (data && data.errors) setErrors(data.errors);
       }
     );
+    if (!errors) history.push("/dashboard");
   };
 
   const demoSubmit = (e) => {
     e.preventDefault();
+    // closeLogin();
+    history.push("/dashboard");
     return dispatch(sessionActions.demoLogin());
   };
 
   return (
     <div className="login-container">
-      <div id="login-title">Welcome back to SoundWave</div>
+      <div id="login-title">Welcome back!</div>
+      <form onSubmit={demoSubmit}>
+        <button className="loginFormBtns" id="demoBtn" type="submit">
+          Demo Log In
+        </button>
+      </form>
+      <div className="login-or">
+        <div className="before-or"></div>
+        <div>or</div>
+        <div className="after-or"></div>
+      </div>
       <form onSubmit={handleSubmit}>
         <div>
           {/* <label>
@@ -73,12 +87,7 @@ export default function LoginFormPage() {
           Register Here
         </button> */}
       </form>
-      <form onSubmit={demoSubmit}>
-        <button className="loginFormBtns" type="submit">
-          Demo Log In
-        </button>
-      </form>
-      <ul>
+      <ul className="form2-errors">
         {errors.map((error, idx) => (
           <li key={idx}>{error}</li>
         ))}

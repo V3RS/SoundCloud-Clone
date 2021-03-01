@@ -37,7 +37,7 @@
   max-width: 530px;
   text-align: center;
   position: relative;
-  bottom: 310px;
+  bottom: 320px;
   left: 350px;
   display: flex;
   justify-content: center;
@@ -51,7 +51,7 @@
   margin-right: auto; */
   /* margin: auto; */
   /* width: 40%; */
-  position: relative;
+  /* position: relative; */
   /* right: 340px; */
   display: flex;
   /* flex-flow: column nowrap; */
@@ -60,9 +60,13 @@
   /* box-sizing: border-box; */
   /* right: 20px; for 13 inch mac make a media query */
   /* top: 5px; */
-  z-index: -10;
+  /* z-index: -10; */
   height: 450px;
-  width: 1240px;
+  /* min-width: 1240px; */
+  /* width: 100%; */
+  transition: all;
+  /* z-index: -5; */
+  /* transform: translateX(100%); */
 }
 
 #slider1btns {
@@ -71,6 +75,7 @@
   justify-content: center;
   position: relative;
   bottom: 300px;
+  left: 30px;
   /* top: 180px; */
   /* z-index: 1; */
 }
@@ -83,11 +88,15 @@
   border: 1px solid #ccc;
   font-size: 17px;
   min-width: 164px;
-  height: 30px;
+  height: 33px;
   margin-right: 25px;
   padding-top: 12px;
   border-radius: 5px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-direction: column;
 }
 #slider1btn2 {
   cursor: pointer;
@@ -98,7 +107,29 @@
   border: none;
   font-size: 17px;
   min-width: 164px;
-  height: 33px;
+  height: 48px;
+  margin-right: 25px;
+  /* padding-top: 12px; */
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  /* width: 100%; */
+  align-items: center;
+  justify-content: center;
+}
+
+#slider2btn2 {
+  cursor: pointer;
+  background-color: #15883e;
+  border: 1px solid #15883e;
+  color: #fff;
+  /* border-color: #ccc; */
+  border: none;
+  font-size: 17px;
+  min-width: 194px;
+  height: 36px;
   margin-right: 25px;
   padding-top: 12px;
   border-radius: 5px;
@@ -106,10 +137,23 @@
 }
 
 .slidbtns {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  /* width: 100%; */
+  align-items: center;
   cursor: pointer;
   position: relative;
-  bottom: 220px;
-  left: 570px;
+  bottom: 255px;
+  left: 605px;
+  margin-left: 10px;
+  border-radius: 100px;
+  height: 18px;
+  width: 18px;
+  background: transparent;
+  border: 1.25px solid white;
+  /* bottom: 220px; */
+  /* left: 570px; */
   /* display: flex; */
   /* flex-direction: column; */
   /* justify-content: center; */
@@ -117,16 +161,35 @@
   /* top: 275px; */
   /* left: 220px; */
 }
+/* add color for active span */
+.slidbtns-active {
+  background: white;
+}
 
 .slide {
   /* z-index: -10; */
-  transform: translateX(-33.3333%);
-  transition: transform 0.6s ease-in-out 0s;
-  width: 300%;
+  /* transform: translateX(-33.3333%); */
+  /* transition: transform 0.6s ease-in-out 0s; */
+  transition: all;
+  max-width: 1240px;
+  display: flex;
+  overflow-x: none;
+  /* z-index: -11; */
 }
 
-.slide.active {
-  transform: translateX(0%);
+.slide-add {
+  transition: all;
+  transform: translateX(-100%);
+  transition: transform 0.6s ease-in-out 0s;
+  width: 300%;
+  /* opacity: 1; */
+  /* transform: translateX(-50%); */
+  /* transform: scale(1.08); */
+}
+
+.slide-add2 {
+  transition: all;
+  transform: translateX(100%);
   transition: transform 0.6s ease-in-out 0s;
   width: 300%;
   /* opacity: 1; */
@@ -142,3 +205,13 @@
   display: flex;
   transition: 10s ease;
 }  */
+
+#fix-please {
+  position: absolute;
+  top: 50px;
+}
+
+.slider2container {
+  position: relative;
+  bottom: 20px;
+}

@@ -23,7 +23,7 @@
 }
 #bottom-splash {
   width: 1240px;
-  height: 120vh;
+  height: 145vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,12 +61,13 @@
   /* position: fixed; */
   top: 550px;
   /* use the height below when data */
-  /* height: 660px; */
-  height: 160px;
+  height: 700px;
+  /* height: 160px; */
   /* height: 10000px; */
-  width: 1180px;
+  width: 1200px;
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
   /* overflow: scroll; */
 }
 
@@ -119,7 +120,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 10px;
+  top: 30px;
   left: 525px;
 }
 
@@ -130,7 +131,7 @@
   width: 240px;
   position: relative;
   /* bottom: 185px; */
-  top: 25px;
+  top: 55px;
   left: 510px;
   /* width: 1000px; */
 }
@@ -169,6 +170,7 @@
   opacity: 0;
   transform: translateY(-100px);
   transition: all 500ms ease-in-out;
+  z-index: 15;
 }
 
 .ReactModal__Overlay--after-open {
@@ -182,4 +184,28 @@
   transform: translateY(-100px);
   /* transform: translateY(100px); */
   /* transition: all 500ms ease-in-out; */
+}
+
+.OuterModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  border: none;
+}
+
+.InnerModal {
+  text-decoration: none;
+  height: 100%;
+  background: white;
+  height: fit-content;
+  /* position: fixed; */
+}
+
+.InnerModal:focus {
+  outline: 0;
 }

@@ -26,16 +26,26 @@ function Navigation({ isLoaded }) {
 
   return (
     <div className="navbar">
-      <nav id="nav">
-        <div id="logo">
-          <img id="imgLogo" src={logo} />
-          <NavLink id="homeBtn" exact to="/">
-            SOUNDWAVE
-          </NavLink>
-        </div>
+      <div id="nav-content">
+        <nav id="nav">
+          <div id="logo">
+            <img id="imgLogo" src={logo} />
+            <NavLink id="homeBtn" exact to="/dashboard">
+              SOUNDWAVE
+            </NavLink>
+            <NavLink id="nav-home" exact to="/dashboard">
+              Home
+            </NavLink>
+            <a id="nav-github">Github</a>
+            <div className="nav-search-container">
+              <input className="nav-search" placeholder="Search"></input>
+            </div>
+            <a id="nav-linkedin">LinkedIn</a>
+          </div>
 
-        {isLoaded && sessionLinks}
-      </nav>
+          {isLoaded && sessionLinks}
+        </nav>
+      </div>
     </div>
   );
 }

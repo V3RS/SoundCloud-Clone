@@ -12,6 +12,14 @@ router.get(
     return res.json({ allSongs });
   })
 );
+//! order matters!
+router.get(
+  "/trend",
+  asyncHandler(async (req, res) => {
+    const trendSongs = await Song.findAll({ limit: 12 });
+    return res.json({ trendSongs });
+  })
+);
 
 router.get(
   "/:id",
@@ -19,14 +27,6 @@ router.get(
     const songId = req.params.id;
     const currentSong = await Song.findByPk(songId);
     return res.json({ currentSong });
-  })
-);
-
-router.get(
-  "/twelve",
-  asyncHandler(async (req, res) => {
-    const twelveSongs = await Song.findAll({ limit: 12 });
-    return res.json({ twelveSongs });
   })
 );
 

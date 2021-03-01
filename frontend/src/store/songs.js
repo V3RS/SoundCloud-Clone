@@ -39,9 +39,9 @@ export const getCurrentSong = (id) => async (dispatch) => {
 };
 
 export const getTrendingSongs = () => async (dispatch) => {
-  const res = await fetch("/api/songs/twelve");
+  const res = await fetch("/api/songs/trend");
   const data = await res.json();
-  //   console.log(data);
+  // console.log("LABELL", data);
   dispatch(getTwelveSongs(data));
   return res;
 };

@@ -2,9 +2,17 @@
   width: 1240px;
   background-color: white;
   margin-top: 46px;
-  height: 3000px;
+  display: block;
+  overflow: auto;
+  height: 100vh;
   /* background-color: white; */
   /* z-index: -11; */
+}
+
+#dashboard-title {
+  position: relative;
+  right: 220px;
+  top: 20px;
 }
 
 .dashboard-songs {
@@ -13,7 +21,7 @@
   /* justify-content: space-between; */
   /* align-items: center; */
   height: 515px;
-  width: 1200px;
+  width: 900px;
   overflow: none;
   /* z-index: -10; */
 }
@@ -22,16 +30,34 @@
   /* border: 1px solid red; */
   position: relative;
   top: 50px;
+  right: 150px;
   /* use the height below when data */
   height: 700px;
   /* height: 160px; */
   /* height: 10000px; */
-  width: 1200px;
+  width: 900px;
   display: flex;
   justify-content: center;
   /* align-items: center; */
   box-sizing: border-box;
   /* overflow: scroll; */
+}
+
+#side-dashboard {
+  position: fixed;
+  top: 56px;
+  right: 350px;
+  height: 100%;
+  width: 350px;
+  border-left: 1px solid #ccc;
+}
+
+#side-top-border {
+  position: fixed;
+  top: 76px;
+  right: 365px;
+  width: 300px;
+  border-top: 1px solid #ccc;
 }
 
 .dashboard-cover-container {

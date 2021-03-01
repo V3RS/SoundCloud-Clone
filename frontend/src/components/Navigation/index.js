@@ -36,16 +36,33 @@ function Navigation({ isLoaded }) {
             <NavLink id="nav-home" exact to="/dashboard">
               Home
             </NavLink>
-            <a id="nav-github">Github</a>
+            <a
+              id="nav-github"
+              href="https://github.com/V3RS/SoundCloud-Clone"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </a>
             <div className="nav-search-container">
               <input className="nav-search" placeholder="Search"></input>
+              <button className="nav-search-btn">
+                <i className="fas fa-search"></i>
+              </button>
             </div>
-            <a id="nav-linkedin">LinkedIn</a>
+            <a
+              id="nav-linkedin"
+              href="https://www.linkedin.com/in/veerkaran-singh-45b4a9190/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
             <NavLink id="nav-upload" to="/">
               Upload
             </NavLink>
             <NavLink id="nav-profile" to="/">
-              {sessionUser.username}
+              {sessionUser?.username}
             </NavLink>
           </div>
 

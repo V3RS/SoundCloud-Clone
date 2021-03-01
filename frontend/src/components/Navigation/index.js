@@ -41,6 +41,12 @@ function Navigation({ isLoaded }) {
               <input className="nav-search" placeholder="Search"></input>
             </div>
             <a id="nav-linkedin">LinkedIn</a>
+            <NavLink id="nav-upload" to="/">
+              Upload
+            </NavLink>
+            <NavLink id="nav-profile" to="/">
+              {sessionUser.username}
+            </NavLink>
           </div>
 
           {isLoaded && sessionLinks}

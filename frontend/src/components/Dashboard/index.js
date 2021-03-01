@@ -2,16 +2,25 @@ import React, { useEffect } from "react";
 import MusicPlayer from "../MusicPlayer";
 import Navigation from "../Navigation";
 import { useDispatch, useSelector } from "react-redux";
+import { Redirect, useHistory } from "react-router-dom";
 
 import { getAllSongs } from "../../store/songs";
 import "./Dashboard.css";
 
 export default function Dashboard({ isLoaded }) {
   const dispatch = useDispatch();
+  const history = useHistory();
 
   useEffect(() => {
     dispatch(getAllSongs());
   }, [dispatch]);
+
+  const sessionUser = useSelector((state) => state.session.user);
+
+  useEffect(() => {
+    if (sessionUser) history.push("/dashboard");
+    else history.push("/");
+  }, [sessionUser]);
 
   const songs = useSelector((state) => state.songsRed.songs);
 

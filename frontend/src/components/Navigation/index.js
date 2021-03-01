@@ -33,6 +33,14 @@ function Navigation({ isLoaded }) {
             <NavLink id="homeBtn" exact to="/dashboard">
               SOUNDWAVE
             </NavLink>
+            <NavLink id="nav-home" exact to="/dashboard">
+              Home
+            </NavLink>
+            <a id="nav-github">Github</a>
+            <div className="nav-search-container">
+              <input className="nav-search" placeholder="Search"></input>
+            </div>
+            <a id="nav-linkedin">LinkedIn</a>
           </div>
 
           {isLoaded && sessionLinks}

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import SplashNavigation from "./SplashNavigation";
 import Slider from "./Slider";
 import "./Splash.css";
@@ -22,25 +23,21 @@ import {
 
 Modal.setAppElement(document.getElementById("root"));
 
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-  },
-};
-
 export default function Splash({ isLoaded }) {
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const signupState = useSelector((state) => state.modal.signupShow);
   const loginState = useSelector((state) => state.modal.loginShow);
+  const sessionUser = useSelector((state) => state.session.user);
 
   const closeModal1 = () => dispatch(closeSignup());
   const closeModal2 = () => dispatch(closeLogin());
+
+  useEffect(() => {
+    if (sessionUser) history.push("/dashboard");
+    else history.push("/");
+  }, [sessionUser]);
 
   return (
     <div className="splash-container">

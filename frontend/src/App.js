@@ -17,7 +17,7 @@ function App() {
   }, [dispatch]);
 
   const songs = useSelector((state) => state.songsRed.songs);
-  console.log(songs);
+  // console.log(songs);
 
   return (
     <div id="container">

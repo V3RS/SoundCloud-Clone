@@ -27,8 +27,17 @@ function SignupFormPage() {
         sessionActions.signup({ email, username, password })
       ).catch(async (res) => {
         const data = await res.json();
-        if (data && data.errors) setErrors(data.errors);
+        // console.log("data-errors,", data.errors);
+        if (data && data.errors) {
+          if (!(typeof data.errors[0] === "object"))
+            return setErrors(data.errors);
+          const err = [];
+          data.errors.map((error) => err.push(error.message));
+          setErrors(err);
+        }
       });
+      // console.log(errors);
+      // if (!errors) history.push("/dashboard");
     }
     return setErrors([
       "Confirm Password field must be the same as the Password field",
@@ -44,7 +53,17 @@ function SignupFormPage() {
   return (
     <div className="signup-container">
       <div id="signup-title">Welcome To SoundWave</div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={demoSubmit}>
+        <button className="signupdemoBtn" id="demoBtn2" type="submit">
+          Demo Log In
+        </button>
+      </form>
+      <div className="signup-or">
+        <div className="before-or"></div>
+        <div>or</div>
+        <div className="after-or"></div>
+      </div>
+      <form onSubmit={handleSubmit} className="signup-form">
         {/* <label>
           Email */}
         <input
@@ -92,18 +111,12 @@ function SignupFormPage() {
         <button className="signup-button" type="submit">
           Sign Up
         </button>
-        <form onSubmit={demoSubmit}>
-          <button className="loginFormBtns" type="submit">
-            Demo Log In
-          </button>
-        </form>
-
-        <ul>
-          {errors.map((error, idx) => (
-            <li key={idx}>{error}</li>
-          ))}
-        </ul>
       </form>
+      <ul className="form-errors">
+        {errors.map((error, idx) => (
+          <li key={idx}>{error}</li>
+        ))}
+      </ul>
     </div>
   );
 }

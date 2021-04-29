@@ -1,24 +1,48 @@
 const router = require("express").Router();
-const { check } = require("express-validator");
-const { Comment } = require("../../db/models");
+const { Comment, User } = require("../../db/models");
 const asyncHandler = require("express-async-handler");
 
 // to get all comments for a certain song
 router.get(
   "/:songId",
   asyncHandler(async (req, res) => {
-    const comments = await Comments.findAll({
+    const comments = await Comment.findAll({
       where: { songId: parseInt(req.params.songId) },
       include: [
         {
           model: User,
-          order: [["createdAt", "DESC"]],
         },
       ],
+      order: [["createdAt", "DESC"]],
     });
-    return res.json({
-      comments,
+    return res.json({ comments });
+  })
+);
+
+// create new comment
+router.post(
+  "/:songId",
+  asyncHandler(async (req, res) => {
+    const songId = parseInt(req.params.songId);
+    const { comment, userId } = req.body;
+
+    await Comment.create({
+      comment,
+      userId,
+      songId,
     });
+
+    const comments = await Comment.findAll({
+      where: { songId: songId },
+      include: [
+        {
+          model: User,
+        },
+      ],
+      order: [["createdAt", "DESC"]],
+    });
+
+    return res.json({ comments });
   })
 );
 

@@ -48,6 +48,25 @@ export const deleteComment = (songId, commentId, userId) => async (
   dispatch(setComments(data.comments));
 };
 
+export const updateComment = (commentId, songId, comment, userId) => async (
+  dispatch
+) => {
+  const response = await csrfFetch(`/api/comments/update`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      commentId,
+      comment,
+      songId,
+      userId,
+    }),
+  });
+  const data = await response.json();
+  dispatch(setComments(data.comments));
+};
+
 const initialState = [];
 const commentReducer = (state = initialState, action) => {
   let newState;

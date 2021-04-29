@@ -69,4 +69,28 @@ router.delete(
   })
 );
 
+router.put(
+  "/update",
+  asyncHandler(async (req, res) => {
+    const { commentId, comment, songId, userId } = req.body;
+    const commentUpdate = await Comment.findByPk(commentId);
+    if (userId !== commentUpdate.userId) return;
+
+    commentUpdate.comment = comment;
+    await commentUpdate.save();
+
+    const comments = await Comment.findAll({
+      where: { songId: songId },
+      include: [
+        {
+          model: User,
+        },
+      ],
+      order: [["createdAt", "DESC"]],
+    });
+
+    return res.json({ comments });
+  })
+);
+
 module.exports = router;

@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-// import { postComment } from "../../../store/comments";
+import { updateComment } from "../../../store/comments";
 
 export default function CommentForm({ songId, user, msg, setEditComForm }) {
   const dispatch = useDispatch();
   const [comment, setComment] = useState("");
 
+  useEffect(() => {
+    setComment(msg.comment);
+  }, []);
   const handleSubmit = (e) => {
     e.preventDefault();
-    // dispatch(postComment(songId, comment, user.id));
+    dispatch(updateComment(msg.id, songId, comment, user.id));
     setComment("");
     setEditComForm(false);
   };

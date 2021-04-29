@@ -17,7 +17,30 @@
 
 .com__msg {
   position: absolute;
-  top: 20px;
+  top: 10px;
   margin-left: 1.5rem;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
+}
+
+.com__btns {
+  position: absolute;
+  top: 20px;
+  right: 5px;
+}
+
+.edit__btn,
+.delete__btn {
+  cursor: pointer;
+  margin-right: 0.75rem;
+}
+
+.delete__btn {
+  color: gray;
+}
+.delete__btn:hover {
+  color: red;
+}
+
+.edit__btn:hover {
+  color: #1fb453;
 }

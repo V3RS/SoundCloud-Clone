@@ -46,4 +46,27 @@ router.post(
   })
 );
 
+router.delete(
+  "/delete",
+  asyncHandler(async (req, res) => {
+    const { commentId, songId, userId } = req.body;
+    const comment = await Comment.findByPk(commentId);
+    if (userId !== comment.userId) return;
+
+    await comment.destroy();
+
+    const comments = await Comment.findAll({
+      where: { songId: songId },
+      include: [
+        {
+          model: User,
+        },
+      ],
+      order: [["createdAt", "DESC"]],
+    });
+
+    return res.json({ comments });
+  })
+);
+
 module.exports = router;

@@ -9,6 +9,7 @@ export default function CommentForm({ songId, user, msg, setEditComForm }) {
   useEffect(() => {
     setComment(msg.comment);
   }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(updateComment(msg.id, songId, comment, user.id));

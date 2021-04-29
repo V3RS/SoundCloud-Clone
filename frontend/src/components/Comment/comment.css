@@ -44,3 +44,7 @@
 .edit__btn:hover {
   color: #1fb453;
 }
+
+.edit__form__c {
+  margin-top: 1.5rem;
+}

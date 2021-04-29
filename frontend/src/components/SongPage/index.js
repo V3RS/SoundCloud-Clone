@@ -108,7 +108,12 @@ export default function SongPage({ isLoaded }) {
               <div id="song-desc-and-comments">
                 {comments &&
                   comments?.map((comment) => (
-                    <Comment comment={comment} key={comment.id} user={user} />
+                    <Comment
+                      comment={comment}
+                      key={comment.id}
+                      user={user}
+                      songId={songId}
+                    />
                   ))}
               </div>
             </div>

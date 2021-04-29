@@ -1,10 +1,10 @@
 import { csrfFetch } from "./csrf";
 
-const GET_COMMENTS = "comments/getComments";
+const SET_COMMENTS = "comments/setComments";
 
-const getComments = (comments) => {
+const setComments = (comments) => {
   return {
-    type: GET_COMMENTS,
+    type: SET_COMMENTS,
     comments,
   };
 };
@@ -12,8 +12,7 @@ const getComments = (comments) => {
 export const getSongComments = (songId) => async (dispatch) => {
   const response = await fetch(`/api/comments/${songId}`);
   const data = await response.json();
-  //   console.log(data.comments);
-  dispatch(getComments(data.comments));
+  dispatch(setComments(data.comments));
 };
 
 export const postComment = (songId, comment, userId) => async (dispatch) => {
@@ -28,21 +27,34 @@ export const postComment = (songId, comment, userId) => async (dispatch) => {
     }),
   });
   const data = await response.json();
-  //   console.log("LLLLL", data.comments);
-  dispatch(getComments(data.comments));
+  dispatch(setComments(data.comments));
+};
+
+export const deleteComment = (songId, commentId, userId) => async (
+  dispatch
+) => {
+  const response = await csrfFetch(`/api/comments/delete`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      commentId,
+      songId,
+      userId,
+    }),
+  });
+  const data = await response.json();
+  dispatch(setComments(data.comments));
 };
 
 const initialState = [];
 const commentReducer = (state = initialState, action) => {
   let newState;
   switch (action.type) {
-    case GET_COMMENTS:
+    case SET_COMMENTS:
       newState = action.comments;
       return newState;
-    // case CREATE_COMMENT:
-    //     return [...state, action.comment];
-    // case DELETE_COMMENT:
-    //   return state.filter((comment) => comment.id !== action.commentId);
     default:
       return state;
   }

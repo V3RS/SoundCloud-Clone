@@ -32,6 +32,7 @@ module.exports = (sequelize, DataTypes) => {
   );
   Song.associate = function (models) {
     // associations can be defined here
+    Song.hasMany(models.Comment, { foreignKey: "songId" });
   };
 
   Song.getCurrentSongById = async function (id) {

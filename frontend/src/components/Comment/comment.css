@@ -1,0 +1,50 @@
+.com__c {
+  margin-top: 1.5rem;
+  /* border: 1px solid black; */
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 5rem;
+  border-radius: 3px;
+  position: relative;
+}
+
+.com__un {
+  position: absolute;
+  top: 5px;
+  margin-top: 5px;
+  color: #1fb453;
+  margin-left: 1.5rem;
+}
+
+.com__msg {
+  position: absolute;
+  top: 10px;
+  margin-left: 1.5rem;
+  margin-top: 2rem;
+}
+
+.com__btns {
+  position: absolute;
+  top: 20px;
+  right: 5px;
+}
+
+.edit__btn,
+.delete__btn {
+  cursor: pointer;
+  margin-right: 0.75rem;
+}
+
+.delete__btn {
+  color: gray;
+}
+.delete__btn:hover {
+  color: red;
+}
+
+.edit__btn:hover {
+  color: #1fb453;
+}
+
+.edit__form__c {
+  margin-top: 1.5rem;
+}

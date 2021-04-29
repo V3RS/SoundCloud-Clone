@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
 import Navigation from "../Navigation";
+import Comment from "../Comment";
+import CommentForm from "./CommentForm";
 import "./SongPage.css";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getCurrentSong } from "../../store/songs";
+import { getSongComments } from "../../store/comments";
 import { Redirect } from "react-router-dom";
 
 export default function SongPage({ isLoaded }) {
@@ -12,14 +15,17 @@ export default function SongPage({ isLoaded }) {
 
   useEffect(() => {
     dispatch(getCurrentSong(songId));
+    dispatch(getSongComments(songId));
   }, [dispatch]);
 
   const song = useSelector((state) => state.songsRed.currentSong);
+  const comments = useSelector((state) => state.comments);
+  const user = useSelector((state) => state.session.user);
 
   //   console.log("song ----> ", song);
 
   //   console.log(songId);
-  //   if (!song) return <Redirect to="/" />;
+  if (!song) return <Redirect to="/" />;
 
   return (
     <div>
@@ -56,12 +62,7 @@ export default function SongPage({ isLoaded }) {
 
             <div id="song-comments">
               <div id="song-comments-container">
-                <div id="song-comments-form-container">
-                  <form id="song-comments-form">
-                    <input type="text" placeholder="Write a comment" />
-                  </form>
-                </div>
-
+                <CommentForm songId={songId} user={user} />
                 <div id="song-comments-stats">
                   <div id="song-stats-buttons">
                     <button className="song-btns" id="sb1">
@@ -104,7 +105,17 @@ export default function SongPage({ isLoaded }) {
                 </div>
                 <div id="song-comments-index"></div>
               </div>
-              <div id="song-desc-and-comments"></div>
+              <div id="song-desc-and-comments">
+                {comments &&
+                  comments?.map((comment) => (
+                    <Comment
+                      comment={comment}
+                      key={comment.id}
+                      user={user}
+                      songId={songId}
+                    />
+                  ))}
+              </div>
             </div>
           </div>
         </div>

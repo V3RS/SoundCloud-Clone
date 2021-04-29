@@ -18,21 +18,21 @@ module.exports = {
           {
             comment: data[Math.round(Math.random() * 4)],
             songId: i,
-            userId: Math.round(Math.random() * 7),
+            userId: Math.round(Math.random() * 7) + 1,
             createdAt: faker.date.recent(),
             updatedAt: faker.date.recent(),
           },
           {
             comment: data[Math.round(Math.random() * 4)],
             songId: i,
-            userId: Math.round(Math.random() * 7),
+            userId: Math.round(Math.random() * 7) + 1,
             createdAt: faker.date.recent(),
             updatedAt: faker.date.recent(),
           },
           {
             comment: data[Math.round(Math.random() * 4)],
             songId: i,
-            userId: Math.round(Math.random() * 7),
+            userId: Math.round(Math.random() * 7) + 1,
             createdAt: faker.date.recent(),
             updatedAt: faker.date.recent(),
           }

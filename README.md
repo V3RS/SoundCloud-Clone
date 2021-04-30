@@ -93,7 +93,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-Here is everything we need you to do to get started with Instrument Match.
+Here is everything we need you to do to get started with SoundWave.
 
 - npm
   ```sh

@@ -11,7 +11,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/V3RS/SoundCloud-Clone">
-    <img src="./frontend/src/components/Navigation/logo.png" alt="Logo" width="180" height="80" style="background-color:white">
+    <img src="./frontend/src/components/Navigation/logo.png" alt="Logo" width="80" height="80" style="background-color:white">
   </a>
 
   <h3 align="center">SoundWave</h3>

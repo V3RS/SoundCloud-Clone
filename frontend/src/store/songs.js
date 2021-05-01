@@ -1,3 +1,5 @@
+import { csrfFetch } from "./csrf";
+
 const GET_ALL_SONGS = "songs/getAllSongs";
 const GET_TWELVE_SONGS = "songs/getTwelveSongs";
 const GET_ONE_SONG = "songs/getOneSong";
@@ -20,6 +22,32 @@ const getOneSong = (song) => {
     type: GET_ONE_SONG,
     song,
   };
+};
+
+export const postSong = (
+  title,
+  artist,
+  genre,
+  albumName,
+  albumCover,
+  audioFile
+) => async (dispatch) => {
+  const response = await csrfFetch(`/api/songs/upload`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      title,
+      artist,
+      genre,
+      albumName,
+      albumCover,
+      audioFile,
+    }),
+  });
+  const data = await response.json();
+  dispatch(getAllSongs());
 };
 
 export const getAllSongs = () => async (dispatch) => {

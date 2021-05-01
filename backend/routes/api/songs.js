@@ -34,7 +34,7 @@ router.get(
 router.post(
   "/",
   asyncHandler(async (req, res) => {
-    const { title, genre, audioFile, album } = req.body;
+    const { title, genre, album } = req.body;
 
     const audioFile = await singlePublicFileUpload(req.file);
     const imgUrl = await singlePublicFileUpload(req.file);

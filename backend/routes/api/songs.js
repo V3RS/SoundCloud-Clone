@@ -32,21 +32,24 @@ router.get(
 );
 
 router.post(
-  "/",
+  "/upload",
+  singleMulterUpload("audioFile"),
   asyncHandler(async (req, res) => {
-    const { title, genre, album } = req.body;
+    const { title, artist, genre, album, imgUrl } = req.body;
 
     const audioFile = await singlePublicFileUpload(req.file);
-    const imgUrl = await singlePublicFileUpload(req.file);
+    // console.log("::::::::::A", audioFile);
 
     const newSong = await Song.create({
       title,
+      artist,
       genre,
       audioFile,
       imgUrl,
-      artist,
       album,
     });
+
+    // console.log("::::::::::N", newSong);
 
     if (newSong) {
       return res.json({ newSong });

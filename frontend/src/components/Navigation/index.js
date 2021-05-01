@@ -58,7 +58,7 @@ function Navigation({ isLoaded }) {
             >
               LinkedIn
             </a>
-            <NavLink id="nav-upload" to="/">
+            <NavLink id="nav-upload" to="/upload">
               Upload
             </NavLink>
             <NavLink id="nav-profile" to="/">

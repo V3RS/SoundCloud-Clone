@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { postSong } from "../../store/songs";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 import "./UploadForm.css";
 
@@ -9,13 +10,28 @@ export default function UploadForm() {
   const [artist, setArtist] = useState("");
   const [genre, setGenre] = useState("");
   const [albumName, setAlbumName] = useState("");
-  const [albumCover, setAlbumCover] = useState(null);
+  const [albumCover, setAlbumCover] = useState("");
   const [audioFile, setAudioFile] = useState(null);
   const dispatch = useDispatch();
+  const history = useHistory();
+
+  const songs = useSelector((state) => state.songsRed.songs);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(postSong(title, artist, genre, albumName, albumCover, audioFile));
+    // console.log("aaaaAAA", audioFile);
+    const song = {
+      title,
+      artist,
+      genre,
+      albumName,
+      albumCover,
+      audioFile,
+    };
+    const newSong = dispatch(postSong(song));
+    // console.log(newSong);
+    // history.push(`/songs/${newSong.id}`);
+    history.push(`/dashboard`);
   };
 
   return (
@@ -33,12 +49,6 @@ export default function UploadForm() {
       <div>TEST Upload</div>
       <div>TEST Upload</div>
       <div>TEST Upload</div>
-      {/* title,
-      genre,
-      audioFile,
-      imgUrl,
-      artist,
-      album, */}
       <div className="up__f__c">
         <form onSubmit={handleSubmit}>
           <input
@@ -65,10 +75,9 @@ export default function UploadForm() {
             value={albumName}
             onChange={(e) => setAlbumName(e.target.value)}
           />
-          <label>Album Cover</label>
           <input
-            type="file"
-            placeholder="Album Cover"
+            type="text"
+            placeholder="Album Cover URL"
             value={albumCover}
             onChange={(e) => setAlbumCover(e.target.value)}
           />
@@ -76,8 +85,7 @@ export default function UploadForm() {
           <input
             type="file"
             placeholder="Audio/MP3"
-            value={audioFile}
-            onChange={(e) => setAudioFile(e.target.value)}
+            onChange={(e) => setAudioFile(e.target.files[0])}
           />
           <button type="submit">Submit</button>
         </form>

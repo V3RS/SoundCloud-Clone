@@ -24,30 +24,29 @@ const getOneSong = (song) => {
   };
 };
 
-export const postSong = (
-  title,
-  artist,
-  genre,
-  albumName,
-  albumCover,
-  audioFile
-) => async (dispatch) => {
+export const postSong = (song) => async (dispatch) => {
+  const { title, artist, genre, albumName, albumCover, audioFile } = song;
+  console.log(song);
+  const formData = new FormData();
+  formData.append("title", title);
+  formData.append("artist", artist);
+  formData.append("genre", genre);
+  formData.append("album", albumName);
+  formData.append("imgUrl", albumCover);
+  formData.append("audioFile", audioFile);
+
+  console.log(formData);
+
   const response = await csrfFetch(`/api/songs/upload`, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type": "multipart/form-data",
     },
-    body: JSON.stringify({
-      title,
-      artist,
-      genre,
-      albumName,
-      albumCover,
-      audioFile,
-    }),
+    body: formData,
   });
   const data = await response.json();
   dispatch(getAllSongs());
+  return data;
 };
 
 export const getAllSongs = () => async (dispatch) => {

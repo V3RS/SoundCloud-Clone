@@ -6,6 +6,7 @@ import Navigation from "./components/Navigation";
 import Splash from "./components/Splash";
 import Dashboard from "./components/Dashboard";
 import SongPage from "./components/SongPage";
+import UploadForm from "./components/UploadForm";
 
 import { getAllSongs } from "./store/songs";
 
@@ -33,20 +34,9 @@ function App() {
           <Route path="/songs/:songId">
             <SongPage isLoaded={isLoaded} />
           </Route>
-          <Route path="/test">
+          <Route path="/upload">
             <Navigation isLoaded={isLoaded} />
-            {songs?.allSongs.map((song) => {
-              return (
-                <div key={song.id}>
-                  <img src={song.imgUrl}></img>
-                  <audio
-                    controls
-                    controlsList="nodownload"
-                    src={song.audioFile}
-                  ></audio>
-                </div>
-              );
-            })}
+            <UploadForm />
           </Route>
           <Route>
             <Redirect to="/" />

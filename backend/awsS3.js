@@ -1,6 +1,6 @@
 const AWS = require("aws-sdk");
 // name of your bucket here
-const soundwavevs = "aws-s3-pern-demo";
+const soundwavevs = "soundwavevs";
 
 const multer = require("multer");
 

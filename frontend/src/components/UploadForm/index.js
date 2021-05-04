@@ -36,58 +36,61 @@ export default function UploadForm() {
 
   return (
     <div className="upload__form__c">
-      <div>TEST Upload</div>
-      <div>TEST Upload</div>
-      <div>TEST Upload</div>
-      <div>TEST Upload</div>
-      <div>TEST Upload</div>
-      <div>TEST Upload</div>
-      <div>TEST Upload</div>
-      <div>TEST Upload</div>
-      <div>TEST Upload</div>
-      <div>TEST Upload</div>
-      <div>TEST Upload</div>
-      <div>TEST Upload</div>
-      <div>TEST Upload</div>
       <div className="up__f__c">
         <form onSubmit={handleSubmit}>
+          <div id="upload__title">Upload</div>
           <input
             type="text"
             placeholder="Title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            className="upload__inputs"
+            required
           />
           <input
             type="text"
             placeholder="Artist"
             value={artist}
             onChange={(e) => setArtist(e.target.value)}
+            className="upload__inputs"
+            required
           />
           <input
             type="text"
             placeholder="Genre"
             value={genre}
             onChange={(e) => setGenre(e.target.value)}
+            className="upload__inputs"
+            required
           />
           <input
             type="text"
             placeholder="Album Name"
             value={albumName}
             onChange={(e) => setAlbumName(e.target.value)}
+            className="upload__inputs"
+            required
           />
           <input
             type="text"
-            placeholder="Album Cover URL"
+            placeholder="Album Cover Image URL"
             value={albumCover}
             onChange={(e) => setAlbumCover(e.target.value)}
+            className="upload__inputs"
+            required
           />
           <label>Audio File</label>
           <input
             type="file"
             placeholder="Audio/MP3"
             onChange={(e) => setAudioFile(e.target.files[0])}
+            className="upload__inputs"
+            id="audio__input"
+            required
           />
-          <button type="submit">Submit</button>
+          <button className="uploadBtn" type="submit">
+            Submit
+          </button>
         </form>
       </div>
     </div>

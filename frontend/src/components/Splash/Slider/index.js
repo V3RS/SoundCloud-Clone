@@ -141,7 +141,9 @@ export default function Slider() {
             space to create, find your fans, and connect with other artists.
           </p>
           <span id="slider1btns">
-            <a id="slider2btn2">Start Uploading Today</a>
+            <a id="slider2btn2" onClick={() => dispatch(openLogin())}>
+              Start Uploading Today
+            </a>
             {/* <button className="slidbtns" onClick={slideChange}></button>
             <button className="slidbtns" onClick={slideChange}></button> */}
           </span>

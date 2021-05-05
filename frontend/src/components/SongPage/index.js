@@ -25,7 +25,7 @@ export default function SongPage({ isLoaded }) {
   //   console.log("song ----> ", song);
 
   //   console.log(songId);
-  if (!song) return <Redirect to="/" />;
+  // if (!song) return <Redirect to="/" />;
 
   return (
     <div>

@@ -61,7 +61,7 @@ SoundWave
 
 ## About The Project
 
-[Click here to view Musicflix live on the web!](https://soundwave-vs.herokuapp.com/)
+[Click here to view SoundWave live on the web!](https://soundwave-vs.herokuapp.com/)
 <br>
 </br>
 <img src="https://live.staticflickr.com/65535/51119712284_5b9abba493_h.jpg" alt="homepage ss" />
